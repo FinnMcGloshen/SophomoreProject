@@ -1,4 +1,57 @@
 body {
-    font-family: "Source Serif Pro", serif;
+  font-family: "Source Serif Pro", serif;
 }
-
+.redirect a {
+  text-decoration: none;
+  color: bisque;
+}
+.home-pg-title {
+  text-align: center;
+  margin-top: 100px;
+}
+.tidy-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.redirect {
+  margin-left: 35px;
+  margin-right: 35px;
+  border-radius: 35px;
+  border-style: none;
+  background-color: lightseagreen;
+  width: 100px;
+  height: 45px;
+  text-decoration: none;
+}
+.About-Us {
+  background-color: grey;
+  width: 1950px;
+  height: 450px;
+}
+.Intro-Title {
+  text-align: center;
+  color: white;
+}
+.Intro {
+  color: white;
+}
+.Village-Info {
+  width: 2050px;
+  height: 450px;
+  background-color: lightcoral;
+}
+.Info-Title {
+  text-align: center;
+}
+.Customer-Reviews {
+  width: max-content;
+  height: 450px;
+  background-color: orange;
+}
+.Comments {
+  text-align: center;
+}
+.Credits {
+  text-align: center;
+}

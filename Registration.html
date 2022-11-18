@@ -14,6 +14,16 @@
   <body>
     <div class="sign-in-div">
       <div class="title">Create an Account</div>
+      <select name="Roles" id="Roles">
+        <option value="">Select a role</option>
+        <option value="">Admin</option>
+        <option value="">Supervisor</option>
+        <option value="">Caregiver</option>
+        <option value="">Doctor</option>
+        <option value="">Family Member</option>
+        <option value="">Patient</option>
+      </select>
+
       <div class="input-fields-1">
         <div class="first-name">
           <input
@@ -34,17 +44,26 @@
         <div class="email">
           <input type="email" class="user-input" placeholder="Email Address" />
         </div>
-        <div class="username">
-          <input type="username" class="user-input" placeholder="Username" />
+        <div class="phone">
+          <input
+            type="tel"
+            placeholder="Phone #"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
         </div>
         <div class="password">
           <input type="password" class="pass-input" placeholder="Password" />
         </div>
+        <div class="dob">
+          <input type="date" class="user-input" placeholder="Date Of Birth" />
+        </div>
       </div>
       <center><button class="signin-btn">Sign Up</button></center>
       <div class="link">
-        Already have an account? <a href="../HTML/Login.html">Sign-In Here!</a>
+        Already have an account? <a href="Login.html">Sign-In Here!</a>
       </div>
     </div>
   </body>
 </html>
+

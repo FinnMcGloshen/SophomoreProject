@@ -28,7 +28,7 @@ VALUES ('Admin',6),
 ('Family Member',1);";
 
 $query4 = 'SELECT * FROM roles;';
-$resul1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
+$result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
 $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
 $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
 $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error());

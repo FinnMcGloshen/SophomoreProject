@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: "Source Serif Pro", serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    background-color: #ecf0f3;
+  }
+  .Payment-Div {
+    width: 700px;
+    height: 850px;
+    padding: 60px 35px 35px 35px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+  }
+  .input-fields {
+    width: 100%;
+    padding: 75px 5px 5px 5px;
+  }
+  .input-fields input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+    font-family: "Source Serif Pro", serif;
+  }
+  .input-fields select {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+    font-family: "Source Serif Pro", serif;
+  }
+  .username,
+  .password {
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+  }
+  .input-fields svg {
+    height: 22px;
+    margin: 0 10px -3px 25px;
+  }
+  .Patient-btn1 {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    height: 60px;
+    font-family: "Source Serif Pro", serif;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background-color: #02c8db;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+    transition: all 0.5s;
+  }
+  .Patient-btn2 {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    height: 60px;
+    font-family: "Source Serif Pro", serif;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background-color: hsl(9, 98%, 43%);
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+    transition: all 0.5s;
+  }
+  .Patient-btn1:hover {
+    background-color: #50e5b9;
+  }
+  .Patient-btn2:hover {
+    background-color: #50e5b9;
+  }
+  .Patient-btn1:active {
+    background-color: #6ec581;
+  }
+  .Patient-btn2:active {
+    background-color: #6ec581;
+  }
+  .title {
+    text-align: center;
+    font-size: 28px;
+    padding-top: 24px;
+    letter-spacing: 0.5px;
+  }
+  .Patient-Btn-Style {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .Item-Info {
+    text-align: center;
+  }
+  input[type="date"]
+  {
+    display: flex;
+    flex-flow: row-reverse;
+    margin-left: 15px;
+  }
+  input::-webkit-datetime-edit-fields-wrapper {
+    position: relative;
+    left: 15px;
+  }
+  

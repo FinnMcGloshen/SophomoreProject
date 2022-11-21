@@ -1,9 +1,26 @@
 body {
   font-family: "Source Serif Pro", serif;
 }
+ul {
+  text-decoration: none;
+  list-style-type: none
+}
+a:link {
+  text-decoration: none;
+}
+.Section-Redirect {
+  font-size: 18px;
+}
+.Nav-Style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 .redirect a {
   text-decoration: none;
-  color: bisque;
+  color: black;
+  font-family: "Source Serif Pro", serif;
+  font-size: 18px;
 }
 .home-pg-title {
   text-align: center;
@@ -23,11 +40,13 @@ body {
   width: 100px;
   height: 45px;
   text-decoration: none;
+  cursor: pointer;
 }
 .About-Us {
   background-color: grey;
-  width: 1950px;
+  width: 100vw;
   height: 450px;
+  margin-top: 20px;
 }
 .Intro-Title {
   text-align: center;
@@ -35,21 +54,27 @@ body {
 }
 .Intro {
   color: white;
+  text-align: center;
+  margin-top: 50px;
 }
 .Village-Info {
-  width: 2050px;
+  width: 100vw;
   height: 450px;
   background-color: lightcoral;
 }
 .Info-Title {
   text-align: center;
 }
-.Customer-Reviews {
-  width: max-content;
+.Client-Reviews-pg {
+  width: 100vw;
   height: 450px;
   background-color: orange;
 }
-.Comments {
+.Client-Reviews {
+  margin-top: 75px;
+  text-align: center;
+}
+.Reviews-Title {
   text-align: center;
 }
 .Credits {

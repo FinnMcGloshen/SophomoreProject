@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Payment.css" />
+    <title>Payment</title>
+  </head>
+  <body>
+    <div class="Payment-Div">
+      <div class="title">Payment Info</div>
+      <div class="input-fields">
+        <h3>Patient ID:</h3>
+        <div class="username">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-vcard"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z"
+            />
+            <path
+              d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z"
+            />
+          </svg>
+
+          <input type="text" placeholder="Ex: 12345" />
+        </div>
+        <h3>Total Due:</h3>
+        <div class="password">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="16"
+            fill="currentColor"
+            class="bi bi-currency-dollar"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"
+            />
+          </svg>
+          <input type="number" min="0.00" max="50000.00" step="0.01" placeholder="Ex: $25.00" />
+        </div>
+        <h3>New Payment:</h3>
+        <div class="password">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="16"
+            fill="currentColor"
+            class="bi bi-currency-dollar"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"
+            />
+          </svg>
+          <input type="number" min="0.00" max="50000.00" step="0.01" placeholder="Ex: $30.00" />
+        </div>
+      </div>
+      <div class="Payment-Btn-Style">
+        <button class="signin-btn1">Okay</button>
+        <button class="signin-btn2">Cancel</button>
+        <button class="signin-btn3">Update</button>
+      </div>
+      <br />
+      <div class="Payment-Cost-Info">
+        <br />
+        <h3 class="Item-Info">$10 for Every Day Stayed.</h3>
+        <h3 class="Item-Info">$50 for Every Appointment Attended.</h3>
+        <h3 class="Item-Info">$5 for Every Medicine/Month.</h3>
+      </div>
+    </div>
+  </body>
+</html>

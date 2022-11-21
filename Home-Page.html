@@ -12,11 +12,11 @@
     <title>Home Page</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>About Us</li>
-        <li>Benefits</li>
-        <li>Client Reviews</li>
+    <nav class="Nav-Decor">
+      <ul class="Nav-Style">
+        <li><a href="#About-Us" class="Section-Redirect">About Us</a></li>
+        <li><a href="#Village-Info" class="Section-Redirect">Village Info</a></li>
+        <li><a href="#Client-Reviews" class="Section-Redirect">Client Reviews</a></li>
       </ul>
     </nav>
     <h2 class="home-pg-title">Welcome to the Millstream Village!</h2>
@@ -26,25 +26,37 @@
       <button class="redirect"><a href="Login.html">Login</a></button>
     </div>
     <br />
-    <div class="About-Us">
+    <div class="About-Us" id="About-Us">
       <h3 class="Intro-Title">About Us</h3>
       <h3 class="Intro">
         We are a Retirement Centre that was founded in 1940.
       </h3>
-      <h3 class="Intro">We have certified staff to ensure that</h3>
+      <h3 class="Intro">
+        Our Mission: To provide the best, affordable care, and treatment to the city. 
+      </h3>
+      <h3 class="Intro">
+        For over 82 years, The Millstream Village has been one of the best Retirement Centre's in the world!
+      </h3>
     </div>
-    <div class="Village-Info">
+    <div class="Village-Info" id="Village-Info">
       <br>
       <h3 class="Info-Title">Millstream Village Benefits</h3>
     </div>
-    <div class="Customer-Reviews">
+    <div class="Client-Reviews-pg" id="Client-Reviews">
       <br>
-      <h3 class="Comments">Customer Reviews</h3>
+      <h3 class="Reviews-Title">Client Reviews</h3>
+      <div class="Review-Carousel">
+      <div class="Client-Reviews"><h3><em>"The Millstream Village is the best Retirement Centre available! 
+        <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>"  - Patience W.</em></h3></div>
+      <div class="Client-Reviews"><h3><em>"Out of all the Retirement Centres, the Millstream Village is the best. Great staff, Great Food and Accomadation for their patients!" <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon> - Horace M.</em></h3></div>
+      <div class="Client-Reviews"><h3><em>"There's only one Retirement Centre I would trust with my family, and that is the Millstream Village." <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon> - Trinity R.</em></h3></div>
+    </div>
     </div>
     <footer class="Final">
       <h3 class="Credits">
         Created for CSET-2023 by: Brian S, Finn M, Aaron W.
       </h3>
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   </body>
 </html>

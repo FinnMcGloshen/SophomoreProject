@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
@@ -16,11 +18,20 @@ body {
 }
 .sign-in-div {
   width: 700px;
-  height: 850px;
+  height: 900px;
   padding: 60px 35px 35px 35px;
   border-radius: 40px;
   background-color: #ecf0f3;
   box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+.input-fields select {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #555;
+  padding: 20px 10px 20px 5px;
+  font-family: "Source Serif Pro", serif;
 }
 .input-fields-1 {
   width: 100%;
@@ -59,10 +70,21 @@ body {
   padding: 20px 35px 20px 5px;
   font-family: "Source Serif Pro", serif;
 }
+.input-fields-2 select {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #555;
+  margin-left: 35px;
+  padding: 20px 35px 20px 5px;
+  font-family: "Source Serif Pro", serif;
+}
 .email,
 .phone,
 .password,
-.dob {
+.dob,
+.roles {
   margin-bottom: 30px;
   border-radius: 25px;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;

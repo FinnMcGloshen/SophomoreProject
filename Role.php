@@ -26,7 +26,6 @@ VALUES ('Admin',6),
 ('Caregiver',3),
 ('Patient',2),
 ('Family Member',1);";
-
 $query4 = 'SELECT * FROM roles;';
 $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
 $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
@@ -34,6 +33,8 @@ $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
 $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
+echo pg_fieldname($result4,0);
+echo pg_fieldname($result4,1);
 echo "<table>\n";
 while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
     echo "\t<tr>\n";

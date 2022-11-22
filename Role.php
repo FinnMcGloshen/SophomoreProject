@@ -33,8 +33,6 @@ $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
 $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
-echo pg_fieldname($result4,0);
-echo pg_fieldname($result4,1);
 echo "<table>\n";
 while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
     echo "\t<tr>\n";
@@ -54,6 +52,10 @@ pg_close($dbconn);
         <input type="text" class="role" placeholder="New Role"/>
         <br>
         <input type="text" class="accesslvl" placeholder="Access Level"/>
+        <br>
+        <button>OK</button>
+        <br>
+        <button>Cancel</button>
     </div>
 </body>
 </html>

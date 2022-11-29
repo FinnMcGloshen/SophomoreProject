@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Source Serif Pro", serif;
+}
+body {
+  background-color: bisque;
+}
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+  width: 90px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+a {
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 20px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+svg {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+.millstream-nav-page {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover {
+  background: #eee;
+}
+nav:hover {
+  width: 280px;
+  transition: all 0.5s ease;
+}
+.log-out {
+  position: absolute;
+  bottom: 0;
+}
+.Welcome-Greeting-1 {
+  text-align: center;
+  margin-top: 15vh;
+}
+.Welcome-Greeting-2 {
+  text-align: center;
+}
+.Caregiver-Table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: fit-content;
+  padding: 10px;
+  background: #fff;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+  border-radius: 12px;
+}
+.table-data {
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  font-size: 20px;
+}
+.table-title {
+  border-bottom: 1px solid #d1d9e6;
+}
+table {
+  border-collapse: collapse;
+}
+.Caregiver-Btn-Tidy-Up {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+.Btn-Style-1 {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 35px;
+  border-style: none;
+  background-color: #02c8db;
+  color: #fff;
+  width: 150px;
+  height: 45px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 24px;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px bisque;
+}
+.Btn-Style-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 35px;
+  border-style: none;
+  background-color: hsl(9, 98%, 43%);
+  width: 150px;
+  height: 45px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px bisque;
+  font-size: 24px;
+}
+.Btn-Style-1:hover {
+  background-color: #50e5b9;
+}
+.Btn-Style-2:hover {
+  background-color: #50e5b9;
+}
+.Btn-Style-1:active {
+  background-color: #6ec581;
+}
+.Btn-Style-2:active {
+  background-color: #6ec581;
+}

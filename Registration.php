@@ -46,6 +46,7 @@ $fields = array('fname','lname','email','role','phone','password','dob');
     // $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
     $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
     echo 'Account created!';
+    header('location: login.php');
   }
 // $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error());
 

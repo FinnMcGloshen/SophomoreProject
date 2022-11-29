@@ -26,7 +26,6 @@ VALUES ('Admin',6),
 ('Caregiver',3),
 ('Patient',2),
 ('Family Member',1);";
-
 $query4 = 'SELECT * FROM roles;';
 $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
 $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
@@ -53,6 +52,10 @@ pg_close($dbconn);
         <input type="text" class="role" placeholder="New Role"/>
         <br>
         <input type="text" class="accesslvl" placeholder="Access Level"/>
+        <br>
+        <button>OK</button>
+        <br>
+        <button>Cancel</button>
     </div>
 </body>
 </html>

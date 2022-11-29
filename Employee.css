@@ -1,40 +1,41 @@
 body {
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
   font-family: "Source Serif Pro", serif;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #555;
-  background-color: #ecf0f3;
+  background: #e6e7ee;
+  color: #44476a;
 }
-.Emp-Pg-UI {
-  width: 1400px;
-  height: 650px;
-  padding: 60px 35px 35px 35px;
-  border-radius: 40px;
-  background-color: #ecf0f3;
-  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+table {
+  border-collapse: collapse;
 }
-.Emp-Title {
+.Emp-Tbl-UI {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: fit-content;
+  padding: 10px;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+  border-radius: 8px;
+}
+.Emp-Tbl-Cells {
+  padding: 10px;
   text-align: center;
-  font-size: 28px;
-  padding-top: 24px;
-  letter-spacing: 0.5px;
+  font-size: x-large;
 }
-.Emp-Btn-Style {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+.Employee-Data {
+  border-bottom: 1px solid #d1d9e6;
 }
+.Employee-Data:nth-last-child(1) {
+  border: none;
+}
+.Emp-Pg-Title {
+  text-align: center;
+}
+
 .Emp-Pg-Btn1 {
   outline: none;
   border: none;
   cursor: pointer;
-  width: 15%;
+  width: 150px;
   height: 60px;
   font-family: "Source Serif Pro", serif;
   border-radius: 30px;
@@ -50,7 +51,7 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
-  width: 15%;
+  width: 150px;
   height: 60px;
   font-family: "Source Serif Pro", serif;
   border-radius: 30px;
@@ -61,6 +62,40 @@ body {
   background-color: hsl(9, 98%, 43%);
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   transition: all 0.5s;
+}
+.Emp-Input-Tidy-Up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 600px;
+  margin-left: 600px;
+  margin-right: 600px;
+  text-align: center;
+}
+.Emp-Input-Data1,
+.Emp-Input-Data2 {
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+.Emp-Input-Data1 input,
+.Emp-Input-Data2 input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #555;
+  padding: 20px 10px 20px 5px;
+  font-family: "Source Serif Pro", serif;
+  text-align: center;
+}
+.Emp-Btn-Style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-left: 600px;
+  margin-right: 600px;
 }
 .Emp-Pg-Btn1:hover {
   background-color: #50e5b9;
@@ -74,22 +109,9 @@ body {
 .Emp-Pg-Btn2:active {
   background-color: #6ec581;
 }
-.Emp-Input-Edit {
-    width: 25%;
-    padding: 75px 5px 5px 5px;
+.Patient-Info-Column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.Emp-Input-Edit input {
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 18px;
-    color: #555;
-    padding: 20px 10px 20px 5px;
-    font-family: "Source Serif Pro", serif;
-}
-  .Employee-ID,
-  .Employee-Salary {
-    margin-bottom: 30px;
-    border-radius: 25px;
-    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
-  }

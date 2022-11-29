@@ -10,7 +10,7 @@
   font-family: "Source Serif Pro", serif;
 }
 body {
-  background-color: bisque;
+  background-color: lightblue;
 }
 nav {
   position: absolute;
@@ -64,21 +64,21 @@ nav:hover {
 .Welcome-Greeting-2 {
   text-align: center;
 }
-.Caregiver-Table {
+.Main-Table {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -70%);
-  width: fit-content;
+  width: 1300px;
   padding: 10px;
   background: #fff;
-  box-shadow: 6px 6px 12px #b8b9be;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
   border-radius: 12px;
 }
 .table-data {
   padding: 10px;
   text-align: center;
-  width: 200px;
+  width: 300px;
   font-size: 20px;
 }
 .table-title {
@@ -87,12 +87,12 @@ nav:hover {
 table {
   border-collapse: collapse;
 }
-.Caregiver-Btn-Tidy-Up {
+.Family-Btn-Tidy-Up {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 40vh;
+  margin-top: 7vh;
 }
 .Btn-Style-1 {
   margin-left: 10px;
@@ -107,7 +107,7 @@ table {
   cursor: pointer;
   transition: all 0.5s;
   font-size: 24px;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px bisque;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px lightcyan;
 }
 .Btn-Style-2 {
   margin-left: 10px;
@@ -121,7 +121,7 @@ table {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px bisque;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px lightcyan;
   font-size: 24px;
 }
 .Btn-Style-1:hover {
@@ -135,4 +135,25 @@ table {
 }
 .Btn-Style-2:active {
   background-color: #6ec581;
+}
+.Patient-Search-Functions-Tidy-Up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50vh;
+}
+.Patient-Search-Style {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+input {
+    margin-top: 15px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background: #fff;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+    border-radius: 12px;
+    font-size: larger;
 }

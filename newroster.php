@@ -15,7 +15,8 @@
 </head>
 <body>
     <div class="newroster">
-        <header>New Roster</header>
+        <h1>New Roster</h1>
+        <p>Date</p>
         <input type="date" class="date" placeholder="Date"/>
         <br>
         <div>
@@ -39,6 +40,13 @@
         <option value="Caregiver">Craig Morgan</option>
         <option value="Caregiver">Abby Watson</option>
         </select>
+        <p>Patient Group:</p>
+        <select name="cg2 patient group">
+            <option value="patient group">A</option>
+            <option value="patient group">B</option>
+            <option value="patient group">C</option>
+            <option value="patient group">D</option>
+        </select>
         </div>
         
         <div>
@@ -48,6 +56,13 @@
         <option value="Caregiver">Steve Johnson</option>
         <option value="Caregiver">Craig Morgan</option>
         <option value="Caregiver">Abby Watson</option>
+        </select>
+        <p>Patient Group:</p>
+        <select name="cg2 patient group">
+            <option value="patient group">A</option>
+            <option value="patient group">B</option>
+            <option value="patient group">C</option>
+            <option value="patient group">D</option>
         </select>
         </div>
         
@@ -59,6 +74,13 @@
         <option value="Caregiver">Craig Morgan</option>
         <option value="Caregiver">Abby Watson</option>
         </select>
+        <p>Patient Group:</p>
+        <select name="cg2 patient group">
+            <option value="patient group">A</option>
+            <option value="patient group">B</option>
+            <option value="patient group">C</option>
+            <option value="patient group">D</option>
+        </select>
         </div>
         
         <div>
@@ -68,6 +90,13 @@
         <option value="Caregiver">Steve Johnson</option>
         <option value="Caregiver">Craig Morgan</option>
         <option value="Caregiver">Abby Watson</option>
+        </select>
+        <p>Patient Group:</p>
+        <select name="cg2 patient group">
+            <option value="patient group">A</option>
+            <option value="patient group">B</option>
+            <option value="patient group">C</option>
+            <option value="patient group">D</option>
         </select>
     </div>
     <br>

@@ -41,7 +41,6 @@ $fields = array('fname','lname','email','role','phone','password','dob');
     $query3 = "INSERT INTO accounts(fname,lname,email,role,phone,password,dob)
     VALUES ('$fname','$lname','$email','$role','$phone','$password','$dob');";
     // $query4 = 'SELECT * FROM accounts;';
-    
     // $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
     // $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
     $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());

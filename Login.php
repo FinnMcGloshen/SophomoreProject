@@ -34,9 +34,29 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
   $data = pg_query($dbconn,$sql); 
   $login_check = pg_num_rows($data);
   if($login_check > 0){ 
-        
+    
     echo "Login Successfully";    
-    header('Location: roster.php');
+    // $query1 ="select role from accounts where email = '".pg_escape_string($_POST['email'])."' and password ='".$password."'";
+    // $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
+    // $query = "SELECT * FROM accounts WHERE email='$email' AND password ='$password'";
+    $sql = "SELECT * FROM accounts WHERE email='$email' AND password ='$password'";
+    $result = pg_query($dbconn, $sql);
+    $row = pg_fetch_assoc($result);
+    if($row["role"]==6 or $row["role"]==5){
+      header('location: roster.php');
+    }
+    elseif($row["role"]==4){
+      header("location: Caregiver's-Home.php");
+    }
+    elseif($row["role"]==3){
+      header("location: Doctor's-Home.html");
+    }
+    elseif($row["role"]==2){
+      header('location: Patient-Additional_Info.html');
+    }
+    else{
+      header("location: Family-Member-Home.html");
+    }
 }else{
     
     echo "Invalid Details";

@@ -10,6 +10,20 @@
     />
     <link rel="stylesheet" href="Caregiver's-Home.css" />
     <title>Caregiver's Home</title>
+    <!-- <?php
+            $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
+            or die('Could not connect: ' . pg_last_error());
+            $sql = "SELECT name FROM patients";
+            $result = pg_query($dbconn, $sql);
+            if(pg_num_rows($result) > 0){
+
+                while ($row = pg_fetch_assoc($result)) {
+                    echo '<tr>';
+                    echo '<td>'. $row['name'] .'</td>';
+                    echo '</tr>';
+                }
+            }
+        ?> -->
   </head>
   <body>
     <nav>
@@ -110,49 +124,76 @@
             <th class="table-data">Dinner</th>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Micheal Jenkins</td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Benjamin Edwards</td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">William Johnson</td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Cheryl Adams</td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Barbara Davis</td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">Richard Nelson</td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">Robert Peterson</td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">Carol Mitchell</td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox"></td>
           </tr>
         </tbody>
       </table>

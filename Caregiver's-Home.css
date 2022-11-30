@@ -72,7 +72,7 @@ nav:hover {
   width: fit-content;
   padding: 10px;
   background: #fff;
-  box-shadow: 6px 6px 12px #b8b9be;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
   border-radius: 12px;
 }
 .table-data {

@@ -1,82 +1,227 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Source Serif Pro", serif;
+}
+
+body {
+  background-color: #cdcdcd;
 }
 ul {
   text-decoration: none;
-  list-style-type: none
+  list-style-type: none;
 }
 a:link {
   text-decoration: none;
 }
 .Section-Redirect {
-  font-size: 18px;
+  color: #fff;
+  font-size: 22px;
+}
+.Company-Motto {
+  font-size: x-large;
 }
 .Nav-Style {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding-bottom: 40px;
 }
-.redirect a {
-  text-decoration: none;
-  color: black;
-  font-family: "Source Serif Pro", serif;
-  font-size: 18px;
-}
-.home-pg-title {
+.Title {
   text-align: center;
   margin-top: 100px;
+  margin-bottom: 100px;
+  font-size: 24px;
 }
-.tidy-up {
+.Neu-Cards {
+  width: 290px;
+  height: 354px;
+  border-radius: 30px;
+  background: #cdcdcd;
+  box-shadow: inset 20px 20px 60px #cdcdcd, inset -20px -20px 60px #cdcdcd;
+  text-align: center;
+}
+.Card-Title {
+  font-size: 23px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background: red;
+  border-style: none;
+  box-shadow: inset 20px 20px 60px red, inset -20px -20px 60px #841525;
+  text-align: center;
+  border-style: none;
+}
+.Card-Title-1 {
+  font-size: 23px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background: rgb(0, 255, 247);
+  border-style: none;
+  box-shadow: inset 20px 20px 60px rgb(0, 255, 247),
+    inset -20px -20px 60px #841525;
+  text-align: center;
+  border-style: none;
+}
+.Card-Title-2 {
+  font-size: 23px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background: rgb(255, 128, 0);
+  border-style: none;
+  box-shadow: inset 20px 20px 60px rgb(255, 128, 0),
+    inset -20px -20px 60px #841525;
+  text-align: center;
+  border-style: none;
+}
+.Card-Title-10 {
+  font-size: 23px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background: rgb(60, 255, 0);
+  border-style: none;
+  box-shadow: inset 20px 20px 60px rgb(60, 255, 0),
+    inset -20px -20px 60px #841525;
+  text-align: center;
+  border-style: none;
+}
+.Card-Title-11 {
+  font-size: 23px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background: rgb(170, 123, 87);
+  border-style: none;
+  box-shadow: inset 20px 20px 60px rgb(170, 123, 87),
+    inset -20px -20px 60px #841525;
+  text-align: center;
+  border-style: none;
+}
+.Card-Title-12 {
+  font-size: 23px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background: rgb(255, 234, 0);
+  border-style: none;
+  box-shadow: inset 20px 20px 60px rgb(255, 234, 0),
+    inset -20px -20px 60px #841525;
+  text-align: center;
+  border-style: none;
+}
+.Card-Text-4,
+.Card-Text-3,
+.Card-Text-2,
+.Card-Text-1 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+.Card-Text-Style {
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 270px;
+  background-color: whitesmoke;
+  box-shadow: inset 20px 20px 60px white, inset -20px -20px 60px #82a3f7;
+  text-align: center;
+  border-style: none;
+  text-align: center;
+}
+.Card-Rows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Page-Info-0,
+.Page-Info-1,
+.Page-Info-2,
+.Page-Info-3,
+.Page-Info-4 {
+  min-height: 100vh;
+}
+.Page-Info-1 {
+  background-color: #cdcdcd;
+}
+.Page-Info-3 {
+  background-color: coral;
+}
+.Page-Info-2 {
+  background-color: bisque;
+}
+.Page-Info-4 {
+  background-color: darkturquoise;
+}
+.Page-Info-0 {
+  background-color: black;
+  color: white;
+  padding-top: 250px;
+}
+.Main-Title {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
+  font-size: x-large;
 }
-.redirect {
-  margin-left: 35px;
-  margin-right: 35px;
+.Btn-Organise {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.Redirect-1,
+.Redirect-2 {
+  margin-left: 10px;
+  margin-right: 10px;
   border-radius: 35px;
   border-style: none;
   background-color: lightseagreen;
-  width: 100px;
+  width: 150px;
   height: 45px;
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.5s;
+  font-size: 20px;
 }
-.About-Us {
-  background-color: grey;
-  width: 100vw;
-  height: 450px;
-  margin-top: 20px;
+.Redirect-1 {
+  margin-left: 450px;
 }
-.Intro-Title {
-  text-align: center;
-  color: white;
+.Redirect-2 {
+  margin-right: 450px;
 }
-.Intro {
-  color: white;
-  text-align: center;
-  margin-top: 50px;
+.Redirect-1:hover {
+  background-color: #50e5b9;
 }
-.Village-Info {
-  width: 100vw;
-  height: 450px;
-  background-color: lightcoral;
+.Redirect-1:active {
+  background-color: #349348;
 }
-.Info-Title {
-  text-align: center;
+.Redirect-2:hover {
+  background-color: #50e5b9;
 }
-.Client-Reviews-pg {
-  width: 100vw;
-  height: 450px;
-  background-color: orange;
+.Redirect-2:active {
+  background-color: #349348;
 }
-.Client-Reviews {
-  margin-top: 75px;
-  text-align: center;
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
 }
-.Reviews-Title {
-  text-align: center;
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
-.Credits {
-  text-align: center;
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 40px;
+  }
+  section .benefit-cards {
+    flex-direction: column;
+  }
 }

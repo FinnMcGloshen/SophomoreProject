@@ -8,11 +8,11 @@
       href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="Registration.css" />
+    <!-- <link rel="stylesheet" href="Registration.css" /> -->
     <title>Registration</title>
     <?php
 // Connecting, selecting database
-$dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
+$dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
     or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query
@@ -45,7 +45,7 @@ $fields = array('fname','lname','email','role','phone','password','dob');
     // $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
     $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
     echo 'Account created!';
-    header('location: login.php');
+    header('location: Login.php');
   }
 // $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error());
 
@@ -106,12 +106,12 @@ pg_close($dbconn);
         <div class="roles">
           <select name="role" id="Role-Type">
             <option value="">Select a role</option>
-            <option value="6">Admin</option>
-            <option value="5">Supervisor</option>
-            <option value="4">Caregiver</option>
-            <option value="3">Doctor</option>
-            <option value="2">Patient</option>
-            <option value="1">Family Member</option>
+            <option value="Admin">Admin</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Caregiver">Caregiver</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Patient">Patient</option>
+            <option value="Family Member">Family Member</option>
           </select>
         </div>
         <div class="phone">

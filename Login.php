@@ -12,7 +12,7 @@
     <title>Login</title>
     <?php
 // Connecting, selecting database
-$dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
+$dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
     or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query

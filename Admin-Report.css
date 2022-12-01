@@ -148,7 +148,7 @@ table {
     flex-direction: column;
     text-align: center;
 }
-input {
+/* input {
     margin-top: 15px;
     width: 200px;
     height: 50px;
@@ -156,4 +156,4 @@ input {
     text-align: center;
     box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
     font-size: larger;
-}
+} */

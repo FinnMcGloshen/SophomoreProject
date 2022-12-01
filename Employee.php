@@ -26,7 +26,10 @@ $query2 = 'CREATE TABLE employees (id int, name text, role text, salary int);';
 $query3 = "INSERT INTO employees(id,name,role,salary)
 VALUES (1,'John Smith', 'Admin', 120000),
 (2,'Dan Miller', 'Supervisor', 100000),
+(3,'Mary Lawrence', 'Supervisor', 100000),
 (3,'Christine Philips', 'Doctor', 90000),
+(3,'Jim Spencer', 'Doctor', 90000),
+(3,'Wendy Harrington', 'Doctor', 90000),
 (4,'Barbara Stevens', 'Caregiver', 80000),
 (5,'Steve Johnson', 'Caregiver', 80000),
 (6,'Craig Morgan', 'Caregiver', 80000),

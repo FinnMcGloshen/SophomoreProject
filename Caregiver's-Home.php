@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,26 +11,17 @@
     />
     <link rel="stylesheet" href="Caregiver's-Home.css" />
     <title>Caregiver's Home</title>
-    <!-- <?php
-            $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
-            or die('Could not connect: ' . pg_last_error());
-            $sql = "SELECT name FROM patients";
-            $result = pg_query($dbconn, $sql);
-            if(pg_num_rows($result) > 0){
-
-                while ($row = pg_fetch_assoc($result)) {
-                    echo '<tr>';
-                    echo '<td>'. $row['name'] .'</td>';
-                    echo '</tr>';
-                }
-            }
-        ?> -->
+<style>.box{
+  height: 20px;
+  width: 20px;
+}
+</style>
   </head>
   <body>
     <nav>
       <ul>
         <li>
-          <a href="Caregiver's-Home.html">
+          <a href="Caregiver's-Home.php">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -84,7 +76,7 @@
           </a>
         </li>
         <li>
-          <a href="Login.html" class="log-out">
+          <a href="Login.php" class="log-out">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -125,83 +117,105 @@
           </tr>
           <tr class="table-title">
             <td class="table-data">Micheal Jenkins</td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input type="checkbox" id="1" class="box"></input></td>
+            <td class="table-data"><input id="2" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="3" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="4" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="5" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="6" type="checkbox" class="box"></td>
+            
           </tr>
           <tr class="table-title">
             <td class="table-data">Benjamin Edwards</td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input id="7" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="8" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="9" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="10" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="11" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="12" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
             <td class="table-data">William Johnson</td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input id="13" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="14" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="15" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="16" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="17" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="18" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
             <td class="table-data">Cheryl Adams</td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input id="19" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="20" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="21" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="22" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="23" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="24" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
             <td class="table-data">Barbara Davis</td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input id="25" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="26" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="27" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="28" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="29" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="30" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
             <td class="table-data">Richard Nelson</td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input id="31" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="32" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="33" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="34" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="35" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="36" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
             <td class="table-data">Robert Peterson</td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input id="37" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="38" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="39" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="40" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="41" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="42" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
             <td class="table-data">Carol Mitchell</td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
-            <td class="table-data"><input type="checkbox"></td>
+            <td class="table-data"><input id="43" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="44" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="45" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="46" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="47" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="48" type="checkbox" class="box"></td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="Caregiver-Btn-Tidy-Up">
-      <button class="Btn-Style-1">Okay</button>
-      <button class="Btn-Style-2">Cancel</button>
+      <button class="Btn-Style-1" onclick="save()">Save</button>
+      <button class="Btn-Style-2" onclick="clear()">Clear</button>
+      
     </div>
     <br />
   </body>
+  <script>
+let boxes = document.getElementsByClassName('box').length;
+function save() {	
+  for(let i = 1; i <= boxes; i++){
+	  var checkbox = document.getElementById(String(i));
+    localStorage.setItem("checkbox" + String(i), checkbox.checked);	
+  }
+}
+//for loading
+for(let i = 1; i <= boxes; i++){
+  if(localStorage.length > 0){
+    var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
+    document.getElementById(String(i)).checked = checked;
+  }
+}
+window.addEventListener('change', save);
+function clear(){
+  localStorage.clear();
+}
+    </script>
 </html>

@@ -128,10 +128,12 @@
     <br />
     <h2 class="Welcome-Greeting-2">Admin Report:</h2>
     <br />
+    <h2 class="Welcome-Greeting-2" id="date"></h2>
     <div class="Main-Table">
       <table>
         <tbody>
           <tr class="table-title">
+            <th class="table-data">Patient's Name</th>
             <th class="table-data">Doctor's Name</th>
             <th class="table-data">Doctor's Appointment</th>
             <th class="table-data">Caregiver's Name</th>
@@ -141,37 +143,24 @@
             <th class="table-data">Breakfast</th>
             <th class="table-data">Lunch</th>
             <th class="table-data">Dinner</th>
-            <th class="table-data">Dinner</th>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Benjamin Edwards</td>
+            <td class="table-data">Christine Philips</td>
+            <td class="table-data"></td>
+            <td class="table-data">Craig Morgan</td>
+            <td class="table-data"></td>
+            <td class="table-data"></td>
+            <td class="table-data"></td>
+            <td class="table-data"></td>
+            <td class="table-data"></td>
+            <td class="table-data"></td>
           </tr>
           <tr class="table-title">
+            <td class="table-data">Barbara Davis</td>
+            <td class="table-data">Wendy Harrington</td>
             <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-          </tr>
-          <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Steve Johnson</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
@@ -180,10 +169,10 @@
             <td class="table-data">test</td>
           </tr>
           <tr class="table-title">
+            <td class="table-data">Carol Mitchell</td>
+            <td class="table-data">Wendy Harrington</td>
             <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Abby Watson</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
@@ -192,10 +181,22 @@
             <td class="table-data">test</td>
           </tr>
           <tr class="table-title">
+            <td class="table-data">William Johnson</td>
+            <td class="table-data">Jim Spencer</td>
+            <td class="table-data">test</td>
+            <td class="table-data">Barbara Stevens</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">Richard Nelson</td>
+            <td class="table-data">Jim Spencer</td>
+            <td class="table-data">test</td>
+            <td class="table-data">Steve Johnson</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
@@ -206,6 +207,36 @@
         </tbody>
       </table>
     </div>
+    <div class="Familt-Btn-Tidy-Up">
+      <button class="Btn-Style-1" onclick="save()">Save</button>
+      <button class="Btn-Style-2" onclick="clear()">Clear</button>
+    </div>
     <br />
   </body>
+  <script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    
+    let boxes = document.getElementsByClassName('box').length;
+    function save() {	
+      for(let i = 1; i <= boxes; i++){
+        var checkbox = document.getElementById(String(i));
+        localStorage.setItem("checkbox" + String(i), checkbox.checked);	
+      }
+    }
+    //for loading
+    for(let i = 1; i <= boxes; i++){
+      if(localStorage.length > 0){
+        var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
+        document.getElementById(String(i)).checked = checked;
+      }
+    }
+    window.addEventListener('change', save);
+    function clear(){
+      localStorage.clear();
+    }
+  </script>
 </html>

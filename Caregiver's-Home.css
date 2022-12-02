@@ -27,7 +27,7 @@ nav {
 a {
   position: relative;
   color: rgb(85, 83, 83);
-  font-size: 20px;
+  font-size: 18px;
   display: table;
   width: 300px;
   padding: 10px;
@@ -38,7 +38,7 @@ svg {
   width: 70px;
   height: 40px;
   top: 14px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
 }
 .millstream-nav-page {
@@ -135,4 +135,37 @@ table {
 }
 .Btn-Style-2:active {
   background-color: #6ec581;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #7449f5;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }

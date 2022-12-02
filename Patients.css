@@ -7,8 +7,8 @@ body {
   text-align: center;
 }
 table {
-    border-collapse: collapse;
-    table-layout: fixed;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 th {
   text-align: center;
@@ -19,20 +19,20 @@ td {
   width: 75px;
 }
 .Patient-Tbl-UI {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    width: 900px;
-    padding: 10px;
-    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
-    border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 900px;
+  padding: 10px;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+  border-radius: 8px;
 }
 .Patient-Data {
-    border-bottom: 1px solid #d1d9e6;
+  border-bottom: 1px solid #d1d9e6;
 }
 .Patient-Data :nth-last-child(1) {
-    border: none;
+  border: none;
 }
 .Patient-Data-Cells {
   padding: 10px;
@@ -40,39 +40,72 @@ td {
   font-size: x-large;
 }
 .Patient-Search-Title {
-    text-align: center;
-    margin-top: 375px;
+  text-align: center;
+  margin-top: 375px;
 }
 .Search-Btn-Style {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .Search-Btn {
-    outline: none;
-    border: none;
-    cursor: pointer;
-    width: 150px;
-    height: 60px;
-    font-family: "Source Serif Pro", serif;
-    border-radius: 30px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    text-align: center;
-    background-color: #02c8db;
-    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
-    transition: all 0.5s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 60px;
+  font-family: "Source Serif Pro", serif;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background-color: #02c8db;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+  transition: all 0.5s;
 }
 .Search-Btn:hover {
-    background-color: #50e5b9;
+  background-color: #50e5b9;
 }
 .Search-Btn:active {
-    background-color: #6ec581;
+  background-color: #6ec581;
 }
 .Patient-Info-Column {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #7449f5;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }

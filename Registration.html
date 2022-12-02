@@ -66,6 +66,18 @@
         Already have an account? <a href="Login.html">Sign-In Here!</a>
       </div>
     </div>
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () =>{
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader-hidden")
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild("loader");
+    })
+} )
+    </script>
   </body>
 </html>
 

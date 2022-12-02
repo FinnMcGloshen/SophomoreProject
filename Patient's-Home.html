@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient's Home
     </title>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
-    rel="stylesheet"
-  />
-    <link rel="stylesheet" href="Patients.css">
     <style>
         table,th,td{
             border:1px solid black
@@ -24,32 +19,92 @@
         <br>
         <input type="text" class="patientname" placeholder="Patient Name"/>
         <br>
-        <input type="date" class="user-input" placeholder="Date Of Birth" name="dob" onfocus="(this.type='date')"/>
+        <input type="text" class="date" placeholder="Date"/>
         <br>
         <table>
-            <tr>
-                <td>Doctor's Name</td>
-                <td>Doctor's Appointment</td>
-                <td>Caregiver's Name</td>
-                <td>Morning Medicine</td>
-                <td>Afternoon Medicine</td>
-                <td>Night Medicine</td>
-                <td>Breakfast</td>
-                <td>Lunch</td>
-                <td>Dinner</td>
+          <tbody>
+            <tr class="table-title">
+              <th class="table-data">Doctor's Name</th>
+              <th class="table-data">Doctor's Appointment</th>
+              <th class="table-data">Caregiver's Name</th>
+              <th class="table-data">Morning Medicine</th>
+              <th class="table-data">Afternoon Medicine</th>
+              <th class="table-data">Night Medicine</th>
+              <th class="table-data">Breakfast</th>
+              <th class="table-data">Lunch</th>
+              <th class="table-data">Dinner</th>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
             </tr>
             <tr>
-                <td>Christine Philips</td>
-                <td><input id="1" type="checkbox" class="box"></td>
-                <td>Steve Johnson</td>
-                <td><input id="2" type="checkbox" class="box"></td>
-                <td><input id="3" type="checkbox" class="box"></td>
-                <td><input id="4" type="checkbox" class="box"></td>
-                <td><input id="5" type="checkbox" class="box"></td>
-                <td><input id="6" type="checkbox" class="box"></td>
-                <td><input id="7" type="checkbox" class="box"></td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
             </tr>
+          </tbody>
         </table>
+      </div>
+      <div class="Patient-Search-Functions-Tidy-Up">
+        <div class="Patient-Search-Style">
+            <h2 class="Search-Title">Date:</h2>
+            <input type="date">
+        </div>
+        <div class="Patient-Search-Style">
+            <h2 class="Search-Title">Patient Name:</h2>
+            <input type="text" placeholder="Ex: John Doe">
+        </div>
+        <div class="Patient-Search-Style">
+            <h2 class="Search-Title">Patient ID:</h2>
+            <input type="number" placeholder="Ex: 12345">
+        </div>
     </div>
 </body>
 <script>

@@ -68,10 +68,29 @@
           <input type="number" min="0.00" max="50000.00" step="0.01" placeholder="Ex: $30.00" />
         </div>
       </div>
+      <div id="confirmation" class="model-container">
+        <div class="model">
+          <section>
+            <header class="model-header">
+              <span onclick="onCancel()"></span>
+              <h2>Are you sure you want to confirm?</h2>
+            </header>
+            <section class="model-content">
+              <p>This action cannot be undone!</p>
+            </section>
+            <footer class="model-footer">
+              <button class="model-btn" onclick="onCancel()">Cancel</button>
+              <button class="model-btn model-confirm-btn" onclick="onConfirm()">
+                Confirm
+              </button>
+            </footer>
+          </section>
+        </div>
+      </div>
       <div class="Payment-Btn-Style">
         <button class="signin-btn1">Okay</button>
         <button class="signin-btn2">Cancel</button>
-        <button class="signin-btn3">Update</button>
+        <button class="signin-btn3" onclick="onDelete()">Update</button>
       </div>
       <br />
       <div class="Payment-Cost-Info">
@@ -81,5 +100,38 @@
         <h3 class="Item-Info">$5 for Every Medicine/Month.</h3>
       </div>
     </div>
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () =>{
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader-hidden")
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild("loader");
+    })
+} )
+function onCancel() {
+        let confirmation = document.getElementById("confirmation");
+        confirmation.classList.remove("model-open");
+      }
+      function onConfirm() {
+        onCancel();
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("confirmation")
+          .addEventListener("click", onCancel);
+        document
+          .querySelector(".model")
+          .addEventListener("click", (e) => e.stopPropagation());
+      });
+      function onDelete() {
+        let confirmation = document.getElementById("confirmation");
+        if (!confirmation.classList.contains("model-open")) {
+          confirmation.classList.add("model-open");
+        }
+      }
+    </script>
   </body>
 </html>

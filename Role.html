@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Role.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Millstream Village Roles</title>
+  </head>
+  <body>
+    <div class="Welcome-Greeting-1"><h2>Millstream Village Role List:</h2></div>
+    <div class="Main-Table">
+      <table>
+        <tbody>
+          <tr class="table-title">
+            <th class="table-data">Role</th>
+            <th class="table-data">Access Level</th>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="Patient-Search-Functions-Tidy-Up">
+      <div class="Patient-Search-Style-1">
+        <h2 class="Search-Title">New Role:</h2>
+        <input type="text" placeholder="Ex: Dishwasher" />
+      </div>
+      <div class="Patient-Search-Style-2">
+        <h2 class="Search-Title">Access Level:</h2>
+        <select name="Roles" id="Role-List" class="Doctor-Selection">
+          <option value="" class="Role-Choices">Select a choice</option>
+          <option value="" class="Role-Choices">1</option>
+          <option value="" class="Role-Choices">2</option>
+          <option value="" class="Role-Choices">3</option>
+          <option value="" class="Role-Choices">4</option>
+          <option value="" class="Role-Choices">5</option>
+          <option value="" class="Role-Choices">6</option>
+        </select>
+      </div>
+    </div>
+    <div id="confirmation" class="model-container">
+      <div class="model">
+        <section>
+          <header class="model-header">
+            <span onclick="onCancel()"></span>
+            <h2>Are you sure you want to confirm?</h2>
+          </header>
+          <section class="model-content">
+            <p>This action cannot be undone!</p>
+          </section>
+          <footer class="model-footer">
+            <button class="model-btn" onclick="onCancel()">Cancel</button>
+            <button class="model-btn model-confirm-btn" onclick="onConfirm()">
+              Confirm
+            </button>
+          </footer>
+        </section>
+      </div>
+    </div>
+    <div class="Family-Btn-Tidy-Up">
+      <button class="Btn-Style-1" onclick="onDelete()">Okay</button>
+      <button class="Btn-Style-2">Cancel</button>
+    </div>
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("loader-hidden");
+
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild("loader");
+        });
+      });
+      function onCancel() {
+        let confirmation = document.getElementById("confirmation");
+        confirmation.classList.remove("model-open");
+      }
+      function onConfirm() {
+        onCancel();
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("confirmation")
+          .addEventListener("click", onCancel);
+        document
+          .querySelector(".model")
+          .addEventListener("click", (e) => e.stopPropagation());
+      });
+      function onDelete() {
+        let confirmation = document.getElementById("confirmation");
+        if (!confirmation.classList.contains("model-open")) {
+          confirmation.classList.add("model-open");
+        }
+      }
+    </script>
+  </body>
+</html>

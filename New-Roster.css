@@ -1,6 +1,9 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   height: 100vh;
@@ -14,16 +17,16 @@ body {
   color: #555;
   background-color: #ecf0f3;
 }
-.Payment-Div {
-  width: 700px;
-  height: 800px;
+.New-Roster-Div {
+  width: 1100px;
+  height: 750px;
   padding: 60px 35px 35px 35px;
   border-radius: 40px;
   background-color: #ecf0f3;
   box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
 }
 .input-fields {
-  width: 100%;
+  width: 50%;
   padding: 75px 5px 5px 5px;
 }
 .input-fields input {
@@ -35,8 +38,20 @@ body {
   padding: 20px 10px 20px 5px;
   font-family: "Source Serif Pro", serif;
 }
+.input-fields select {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #555;
+  padding: 20px 10px 20px 5px;
+  font-family: "Source Serif Pro", serif;
+}
 .username,
 .password {
+  margin-left: 30px;
+  padding-left: 15px;
+  width: 300px;
   margin-bottom: 30px;
   border-radius: 25px;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
@@ -45,11 +60,11 @@ body {
   height: 22px;
   margin: 0 10px -3px 25px;
 }
-.signin-btn1 {
+.Patient-btn1 {
   outline: none;
   border: none;
   cursor: pointer;
-  width: 30%;
+  width: 20%;
   height: 60px;
   font-family: "Source Serif Pro", serif;
   border-radius: 30px;
@@ -61,11 +76,11 @@ body {
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   transition: all 0.5s;
 }
-.signin-btn2 {
+.Patient-btn2 {
   outline: none;
   border: none;
   cursor: pointer;
-  width: 30%;
+  width: 20%;
   height: 60px;
   font-family: "Source Serif Pro", serif;
   border-radius: 30px;
@@ -77,38 +92,16 @@ body {
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   transition: all 0.5s;
 }
-.signin-btn3 {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  width: 30%;
-  height: 60px;
-  font-family: "Source Serif Pro", serif;
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  background-color: hsl(150, 97%, 37%);
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
-  transition: all 0.5s;
-}
-.signin-btn1:hover {
+.Patient-btn1:hover {
   background-color: #50e5b9;
 }
-.signin-btn2:hover {
+.Patient-btn2:hover {
   background-color: #50e5b9;
 }
-.signin-btn3:hover {
-  background-color: #50e5b9;
-}
-.signin-btn1:active {
+.Patient-btn1:active {
   background-color: #6ec581;
 }
-.signin-btn2:active {
-  background-color: #6ec581;
-}
-.signin-btn3:active {
+.Patient-btn2:active {
   background-color: #6ec581;
 }
 .title {
@@ -117,17 +110,44 @@ body {
   padding-top: 24px;
   letter-spacing: 0.5px;
 }
-.Payment-Btn-Style {
+.Patient-Btn-Style {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.Payment-Cost-Info {
+.Item-Info {
+  text-align: center;
+}
+input[type="date"] {
+  display: flex;
+  flex-flow: row-reverse;
+  margin-left: 15px;
+}
+input[type="text"] {
+  display: flex;
+  flex-flow: row-reverse;
+  margin-left: 15px;
+}
+input::-webkit-datetime-edit-fields-wrapper {
+  position: relative;
+  left: 15px;
+}
+.New-Roster-Section-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Section-1-Style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.New-Roster-Section-2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.Item-Info {
+  margin-left: 500px;
   text-align: center;
 }
 .loader {
@@ -225,6 +245,6 @@ body {
 .model-confirm-btn {
   background-color: tomato;
   font-family: "Source Serif Pro", serif;
-border: none;
-cursor: pointer;
+  border: none;
+  cursor: pointer;
 }

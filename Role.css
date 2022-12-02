@@ -1,120 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Source Serif Pro", serif;
+}
 body {
   font-family: "Source Serif Pro", serif;
-  background: #e6e7ee;
-  color: #44476a;
+  background: #49def5;
+}
+.Welcome-Greeting-1 {
+  text-align: center;
+  margin-top: 15vh;
+}
+.Welcome-Greeting-2 {
+  text-align: center;
+}
+.Main-Table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  width: 550px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+  border-radius: 12px;
+}
+.table-data {
+  padding: 10px;
+  text-align: center;
+  width: 300px;
+  font-size: 20px;
+}
+.table-title {
+  border-bottom: 1px solid #d1d9e6;
 }
 table {
   border-collapse: collapse;
 }
-.Emp-Tbl-UI {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  width: fit-content;
-  padding: 10px;
-  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
-  border-radius: 8px;
-}
-.Emp-Tbl-Cells {
-  padding: 10px;
-  text-align: center;
-  font-size: x-large;
-}
-.Employee-Data {
-  border-bottom: 1px solid #d1d9e6;
-}
-.Employee-Data:nth-last-child(1) {
-  border: none;
-}
-.Emp-Pg-Title {
-  text-align: center;
-}
-
-.Emp-Pg-Btn1 {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  width: 150px;
-  height: 60px;
-  font-family: "Source Serif Pro", serif;
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  background-color: #02c8db;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
-  transition: all 0.5s;
-}
-.Emp-Pg-Btn2 {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  width: 150px;
-  height: 60px;
-  font-family: "Source Serif Pro", serif;
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  background-color: hsl(9, 98%, 43%);
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
-  transition: all 0.5s;
-}
-.Emp-Input-Tidy-Up {
+.Patient-Search-Functions-Tidy-Up {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 600px;
-  margin-left: 600px;
-  margin-right: 600px;
-  text-align: center;
+  margin-top: 40vh;
 }
-.Emp-Input-Data1,
-.Emp-Input-Data2 {
-  margin-bottom: 30px;
-  border-radius: 25px;
-  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
-}
-.Emp-Input-Data1 input,
-.Emp-Input-Data2 input {
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 18px;
-  color: #555;
-  padding: 20px 10px 20px 5px;
-  font-family: "Source Serif Pro", serif;
-  text-align: center;
-}
-.Emp-Btn-Style {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 10px;
-  margin-left: 600px;
-  margin-right: 600px;
-}
-.Emp-Pg-Btn1:hover {
-  background-color: #50e5b9;
-}
-.Emp-Pg-Btn2:hover {
-  background-color: #50e5b9;
-}
-.Emp-Pg-Btn1:active {
-  background-color: #6ec581;
-}
-.Emp-Pg-Btn2:active {
-  background-color: #6ec581;
-}
-.Patient-Info-Column {
+.Patient-Search-Style-1 {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  margin-left: 400px;
+}
+.Patient-Search-Style-2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 400px;
+}
+input {
+  margin-top: 15px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background: #fff;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+  border-radius: 12px;
+  font-size: larger;
+}
+select {
+    margin-top: 15px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background: #fff;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+    border-radius: 12px;
+    font-size: larger;
+}
+.Family-Btn-Tidy-Up {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 13vh;
 }
+.Btn-Style-1 {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 35px;
+  border-style: none;
+  background-color: #02c8db;
+  color: #fff;
+  width: 150px;
+  height: 45px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 24px;
+  box-shadow: 3px 3px 8px black, -3px -3px 8px #49def5;
+}
+.Btn-Style-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 35px;
+  border-style: none;
+  background-color: hsl(9, 98%, 43%);
+  width: 150px;
+  height: 45px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  box-shadow: 3px 3px 8px black, -3px -3px 8px #49def5;
+  font-size: 24px;
+}
+.Btn-Style-1:hover {
+  background-color: #50e5b9;
+}
+.Btn-Style-2:hover {
+  background-color: #50e5b9;
+}
+.Btn-Style-1:active {
+  background-color: #6ec581;
+}
+.Btn-Style-2:active {
+  background-color: #6ec581;
+}
+
 .loader {
   position: fixed;
   top: 0;

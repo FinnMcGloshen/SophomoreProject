@@ -9,14 +9,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="Patient-Additional_Info.css" />
-    <title>Payment Additional Info</title>
+    <title>Patient Additional Info</title>
   </head>
   <body>
     <div class="Payment-Div">
       <div class="title">Patient Additional Info</div>
       <div class="input-fields">
         <h3>Patient ID:</h3>
-        <br>
+        <br />
         <div class="username">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,32 +37,108 @@
           <input type="text" placeholder="Ex: 12345" />
         </div>
         <h3>Group:</h3>
-        <br>
+        <br />
         <div class="password">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
-              </svg>
-          <input type="text" min="0.00" max="50000.00" step="0.01" placeholder="Ex: 12345" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="16"
+            fill="currentColor"
+            class="bi bi-people-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+            />
+          </svg>
+          <input
+            type="text"
+            min="0.00"
+            max="50000.00"
+            step="0.01"
+            placeholder="Ex: 12345"
+          />
         </div>
         <h3>Admission Date:</h3>
-        <br>
+        <br />
         <div class="password">
           <input type="date" placeholder="Ex: $30.00" />
         </div>
         <h3>Patient Name:</h3>
-        <br>
+        <br />
         <div class="password">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-              </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+            />
+          </svg>
           <input type="text" placeholder="Ex: John Doe" />
         </div>
       </div>
+      <div id="confirmation" class="model-container">
+        <div class="model">
+          <section>
+            <header class="model-header">
+              <span onclick="onCancel()"></span>
+              <h2>Are you sure you want to confirm?</h2>
+            </header>
+            <section class="model-content">
+              <p>This action cannot be undone!</p>
+            </section>
+            <footer class="model-footer">
+              <button class="model-btn" onclick="onCancel()">Cancel</button>
+              <button class="model-btn model-confirm-btn" onclick="onConfirm()">
+                Confirm
+              </button>
+            </footer>
+          </section>
+        </div>
+      </div>
       <div class="Patient-Btn-Style">
-        <button class="Patient-btn1">Okay</button>
+        <button class="Patient-btn1" onclick="onDelete()">Okay</button>
         <button class="Patient-btn2">Cancel</button>
       </div>
       <br />
     </div>
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("loader-hidden");
+
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild("loader");
+        });
+      });
+      function onCancel() {
+        let confirmation = document.getElementById("confirmation");
+        confirmation.classList.remove("model-open");
+      }
+      function onConfirm() {
+        onCancel();
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("confirmation")
+          .addEventListener("click", onCancel);
+        document
+          .querySelector(".model")
+          .addEventListener("click", (e) => e.stopPropagation());
+      });
+      function onDelete() {
+        let confirmation = document.getElementById("confirmation");
+        if (!confirmation.classList.contains("model-open")) {
+          confirmation.classList.add("model-open");
+        }
+      }
+    </script>
   </body>
 </html>

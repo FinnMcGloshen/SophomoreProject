@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Patient-Of-Doctor.css" />
+    <title>Patient Of Doctor</title>
+  </head>
+  <body>
+    <h2 class="Welcome-Greeting">Patient of Doctor Data:</h2>
+    <br />
+    <h2 class="Table-Title">Current Medicine:</h2>
+    <br />
+    <div class="Main-Table">
+      <table>
+        <tbody>
+          <tr class="table-title">
+            <th class="table-data">Date</th>
+            <th class="table-data">Morning Medicine</th>
+            <th class="table-data">Afternoon Medicine</th>
+            <th class="table-data">Evening Medicine</th>
+            <th class="table-data">Comments</th>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="Welcome-Greeting-2"><h2>Add a New Prescription:</h2></div>
+      <div class="POD-Input-Organise">
+        <div class="POD-Input-Style">
+          <h2>Morning Medicine:</h2>
+          <input type="text">
+        </div>
+        <div class="POD-Input-Style">
+          <h2>Afternoon Medicine:</h2>
+          <input type="text">
+        </div>
+        <div class="POD-Input-Style">
+          <h2>Evening Medicine:</h2>
+          <input type="text">
+        </div>
+        <div class="POD-Input-Style">
+          <h2>Doctor's Comments:</h2>
+          <input type="text">
+        </div>
+      </div>
+    <div class="POD-Btn-Organise">
+      <button class="POD-Btn-1">Okay</button>
+      <button class="POD-Btn-2">Cancel</button>
+    </div>
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () =>{
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader-hidden")
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild("loader");
+    })
+} )
+    </script>
+  </body>
+</html>

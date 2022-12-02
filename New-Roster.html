@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="New-Roster.css" />
+    <title>New Roster</title>
+  </head>
+  <body>
+    <div class="New-Roster-Div">
+      <h2><center>Create a New Roster:</center></h2>
+      <div class="input-fields">
+        <div class="New-Roster-Section-1">
+          <div class="Section-1-Style">
+            <h3>Supervisor:</h3>
+            <br />
+            <div class="username">
+              <select name="Roles" id="Roles" class="Doctor-Selection">
+                <option value="" class="Doctor-Choices">Select a choice</option>
+                <option value="" class="Doctor-Choices">Jen A.</option>
+                <option value="" class="Doctor-Choices">Mike. W</option>
+                <option value="" class="Doctor-Choices">Penny K.</option>
+                <option value="" class="Doctor-Choices">Adam C.</option>
+              </select>
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Doctor:</h3>
+            <br />
+            <div class="username">
+              <select name="Roles" id="Roles-2" class="Doctor-Selection">
+                <option value="" class="Doctor-Choices">Select a choice</option>
+                <option value="" class="Doctor-Choices">Dr. Lee</option>
+                <option value="" class="Doctor-Choices">Dr. Hubert</option>
+                <option value="" class="Doctor-Choices">Dr. Moon</option>
+                <option value="" class="Doctor-Choices">Dr. Forrest</option>
+              </select>
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Caregiver #1:</h3>
+            <br />
+            <div class="username">
+              <select name="Roles" id="Roles-3" class="Doctor-Selection">
+                <option value="" class="Doctor-Choices">Select a choice</option>
+                <option value="" class="Doctor-Choices">Walter B.</option>
+                <option value="" class="Doctor-Choices">Robert L.</option>
+                <option value="" class="Doctor-Choices">Julian O.</option>
+                <option value="" class="Doctor-Choices">Amy A.</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="New-Roster-Section-1">
+          <div class="Section-1-Style">
+            <h3>Caregiver #2:</h3>
+            <br />
+            <div class="username">
+              <select name="Roles" id="Roles-4" class="Doctor-Selection">
+                <option value="" class="Doctor-Choices">Select a choice</option>
+                <option value="" class="Doctor-Choices">Katie R.</option>
+                <option value="" class="Doctor-Choices">Ben U.</option>
+                <option value="" class="Doctor-Choices">Kay L.</option>
+                <option value="" class="Doctor-Choices">Matt M.</option>
+              </select>
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Caregiver #3:</h3>
+            <br />
+            <div class="username">
+              <select name="Roles" id="Roles-5" class="Doctor-Selection">
+                <option value="" class="Doctor-Choices">Select a choice</option>
+                <option value="" class="Doctor-Choices">Roger F.</option>
+                <option value="" class="Doctor-Choices">John V.</option>
+                <option value="" class="Doctor-Choices">Vince X.</option>
+                <option value="" class="Doctor-Choices">Xander P.</option>
+              </select>
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Caregiver #4:</h3>
+            <br />
+            <div class="username">
+              <select name="Roles" id="Roles-6" class="Doctor-Selection">
+                <option value="" class="Doctor-Choices">Select a choice</option>
+                <option value="" class="Doctor-Choices">Alex G.</option>
+                <option value="" class="Doctor-Choices">Gordon L.</option>
+                <option value="" class="Doctor-Choices">Rosa S.</option>
+                <option value="" class="Doctor-Choices">Stephanie W.</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="New-Roster-Section-2">
+          <div class="Section-2-Style">
+            <h3>Date:</h3>
+            <br />
+            <div class="username">
+              <input type="date" placeholder="Ex: 12345" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div id="confirmation" class="model-container">
+        <div class="model">
+          <section>
+            <header class="model-header">
+              <span onclick="onCancel()"></span>
+              <h2>Are you sure you want to confirm these changes?</h2>
+            </header>
+            <section class="model-content">
+              <p>This action cannot be undone!</p>
+            </section>
+            <footer class="model-footer">
+              <button class="model-btn" onclick="onCancel()">Cancel</button>
+              <button class="model-btn model-confirm-btn" onclick="onConfirm()">
+                Confirm
+              </button>
+            </footer>
+          </section>
+        </div>
+      </div>
+      <div class="Patient-Btn-Style">
+        <button class="Patient-btn1" onclick="onDelete()">Okay</button>
+        <button class="Patient-btn2">Cancel</button>
+      </div>
+      <br />
+    </div>
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("loader-hidden");
+
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild("loader");
+        });
+      });
+      function onCancel() {
+        let confirmation = document.getElementById("confirmation");
+        confirmation.classList.remove("model-open");
+      }
+      function onConfirm() {
+        onCancel();
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("confirmation")
+          .addEventListener("click", onCancel);
+        document
+          .querySelector(".model")
+          .addEventListener("click", (e) => e.stopPropagation());
+      });
+      function onDelete() {
+        let confirmation = document.getElementById("confirmation");
+        if (!confirmation.classList.contains("model-open")) {
+          confirmation.classList.add("model-open");
+        }
+      }
+    </script>
+  </body>
+</html>

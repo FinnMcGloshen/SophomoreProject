@@ -32,7 +32,16 @@
           </a>
         </li>
         <li>
-            <a href="Roster.html">
+          <a href="Roster.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+              <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+              <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+            </svg>
+            <span class="millstream-nav-page">Curent Roster</span>
+          </a>
+        </li>
+        <li>
+            <a href="New-Roster.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
                     <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
                     <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
@@ -127,11 +136,14 @@
     <h2 class="Welcome-Greeting-1">Welcome Millstream Admin!</h2>
     <br />
     <h2 class="Welcome-Greeting-2">Admin Report:</h2>
+    
     <br />
+    <h2 class="Welcome-Greeting-2" id="date"></h2>
     <div class="Main-Table">
       <table>
         <tbody>
           <tr class="table-title">
+            <th class="table-data">Patient's Name</th>
             <th class="table-data">Doctor's Name</th>
             <th class="table-data">Doctor's Appointment</th>
             <th class="table-data">Caregiver's Name</th>
@@ -141,71 +153,112 @@
             <th class="table-data">Breakfast</th>
             <th class="table-data">Lunch</th>
             <th class="table-data">Dinner</th>
-            <th class="table-data">Dinner</th>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Benjamin Edwards</td>
+            <td class="table-data">Christine Philips</td>
+            <td class="table-data"><input id="1" type="checkbox" class="box"></td>
+            <td class="table-data">Craig Morgan</td>
+            <td class="table-data"><input id="2" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="3" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="4" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="5" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="6" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="7" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Barbara Davis</td>
+            <td class="table-data">Wendy Harrington</td>
+            <td class="table-data"><input id="8" type="checkbox" class="box"></td>
+            <td class="table-data">Steve Johnson</td>
+            <td class="table-data"><input id="9" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="10" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="11" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="12" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="13" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="14" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Carol Mitchell</td>
+            <td class="table-data">Wendy Harrington</td>
+            <td class="table-data"><input id="15" type="checkbox" class="box"></td>
+            <td class="table-data">Abby Watson</td>
+            <td class="table-data"><input id="16" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="17" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="18" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="19" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="20" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="21" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">William Johnson</td>
+            <td class="table-data">Jim Spencer</td>
+            <td class="table-data"><input id="22" type="checkbox" class="box"></td>
+            <td class="table-data">Barbara Stevens</td>
+            <td class="table-data"><input id="23" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="24" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="25" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="26" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="27" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="28" type="checkbox" class="box"></td>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Richard Nelson</td>
+            <td class="table-data">Jim Spencer</td>
+            <td class="table-data"><input id="29" type="checkbox" class="box"></td>
+            <td class="table-data">Steve Johnson</td>
+            <td class="table-data"><input id="30" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="31" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="32" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="33" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="34" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="35" type="checkbox" class="box"></td>
           </tr>
         </tbody>
       </table>
     </div>
+    <!-- <div class="Familt-Btn-Tidy-Up">
+      <button class="Btn-Style-1" onclick="save()">Save</button>
+      <button class="Btn-Style-2" onclick="clear()">Clear</button>
+    </div> -->
     <br />
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () =>{
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader-hidden")
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild("loader");
+    })
+} )
+    </script>
   </body>
+  <script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    
+    let boxes = document.getElementsByClassName('box').length;
+    function save() {	
+      for(let i = 1; i <= boxes; i++){
+        var checkbox = document.getElementById(String(i));
+        localStorage.setItem("checkbox" + String(i), checkbox.checked);	
+      }
+    }
+    //for loading
+    for(let i = 1; i <= boxes; i++){
+      if(localStorage.length > 0){
+        var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
+        document.getElementById(String(i)).checked = checked;
+      }
+    }
+    window.addEventListener('change', save);
+    function clear(){
+      localStorage.clear();
+    }
+  </script>
 </html>

@@ -148,6 +148,7 @@ table {
   flex-direction: column;
   text-align: center;
 }
+<<<<<<< HEAD
 input {
   margin-top: 15px;
   width: 200px;
@@ -190,3 +191,14 @@ input {
     transform: rotate(1turn);
   }
 }
+=======
+/* input {
+    margin-top: 15px;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    font-size: larger;
+} */
+>>>>>>> 3503ea56e79c81bc6ddbfdc9b2ed8d19d47d2b4a

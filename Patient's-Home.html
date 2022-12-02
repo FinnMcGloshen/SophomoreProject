@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient's Home
     </title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="Patients.css">
     <style>
         table,th,td{
             border:1px solid black
@@ -19,7 +24,7 @@
         <br>
         <input type="text" class="patientname" placeholder="Patient Name"/>
         <br>
-        <input type="text" class="date" placeholder="Date"/>
+        <input type="date" class="user-input" placeholder="Date Of Birth" name="dob" onfocus="(this.type='date')"/>
         <br>
         <table>
             <tr>
@@ -34,17 +39,43 @@
                 <td>Dinner</td>
             </tr>
             <tr>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
-                <td>x</td>
+                <td>Christine Philips</td>
+                <td><input id="1" type="checkbox" class="box"></td>
+                <td>Steve Johnson</td>
+                <td><input id="2" type="checkbox" class="box"></td>
+                <td><input id="3" type="checkbox" class="box"></td>
+                <td><input id="4" type="checkbox" class="box"></td>
+                <td><input id="5" type="checkbox" class="box"></td>
+                <td><input id="6" type="checkbox" class="box"></td>
+                <td><input id="7" type="checkbox" class="box"></td>
             </tr>
         </table>
     </div>
 </body>
+<script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+
+let boxes = document.getElementsByClassName('box').length;
+    function save() {	
+      for(let i = 1; i <= boxes; i++){
+        var checkbox = document.getElementById(String(i));
+        localStorage.setItem("checkbox" + String(i), checkbox.checked);	
+      }
+    }
+    //for loading
+    for(let i = 1; i <= boxes; i++){
+      if(localStorage.length > 0){
+        var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
+        document.getElementById(String(i)).checked = checked;
+      }
+    }
+    window.addEventListener('change', save);
+    function clear(){
+      localStorage.clear();
+    }
+  </script>
 </html>

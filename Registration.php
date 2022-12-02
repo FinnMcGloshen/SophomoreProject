@@ -10,6 +10,7 @@
     />
     <!-- <link rel="stylesheet" href="Registration.css" /> -->
     <title>Registration</title>
+  </head>
     <?php
 // Connecting, selecting database
 $dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
@@ -28,6 +29,7 @@ $fields = array('fname','lname','email','role','phone','password','dob');
 //     }
 
   if(isset($_POST['signup'])){
+    // form data
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $email = $_POST['email'];
@@ -35,15 +37,25 @@ $fields = array('fname','lname','email','role','phone','password','dob');
     $phone = $_POST['phone'];
     $password = $_POST['password'];
     $dob = $_POST['dob'];
+    $familyCode = intval($_POST['familyCode']);
+    $emergencyContact = $_POST['emergencyContact'];
+    $relation = $_POST['relation'];
+    $admissionDate = $_POST['admissionDate'];
     // $fields = implode (" , ", $fields);
     // $query1 = 'DROP TABLE IF EXISTS accounts;';
     // $query2 = 'CREATE TABLE accounts (fname text, lname text, email text, role text, phone text, password text, dob date);';
-    $query3 = "INSERT INTO accounts(fname,lname,email,role,phone,password,dob)
+    $query3 = "INSERT INTO accounts(id,fname,lname,email,role,phone,password,dob)
     VALUES ('$fname','$lname','$email','$role','$phone','$password','$dob');";
+    $additionalQuery = "INSERT INTO accounts(fname,lname,email,role,phone,password,dob, family_code, emcontact, relation, admission_date, group_letter)
+    VALUES ('$fname','$lname','$email','$role','$phone','$password','$dob',$familyCode,'$emergencyContact','$relation','$admissionDate',NULL);";
     // $query4 = 'SELECT * FROM accounts;';
     // $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
     // $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
-    $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
+    if($role == 'Patient'){
+      $result3 = pg_query($additionalQuery) or die('Query failed: ' . pg_last_error());
+    } else {
+      $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
+    }
     echo 'Account created!';
     header('location: Login.php');
   }
@@ -75,7 +87,6 @@ $fields = array('fname','lname','email','role','phone','password','dob');
 // Closing connection
 pg_close($dbconn);
 ?>
-  </head>
   <body>
     <div class="sign-in-div">
       <div class="title">Create an Account</div>
@@ -129,12 +140,42 @@ pg_close($dbconn);
         <div class="dob">
           <input type="date" class="user-input" placeholder="Date Of Birth" name="dob"/>
         </div>
+        <div class="additionalInfo" id="additionalInfo">
+          <div class="familyCode">
+            Family Code<input type="number" placeholder="Family Code" name="familyCode">
+          </div>
+          <div class="emergencyContact">
+            EM Contact<input type="text" placeholder="Emergency Contact" name="emergencyContact">
+          </div>
+          <div class="relation">
+            Relation<input type="text" placeholder="Relation to Contact" name="relation">
+          </div>
+          <div class="admissionDate">
+            Admission Date<input type="date" name="admissionDate">
+          </div>
+        </div>
       </div>
       <center><input class="signin-btn" type="submit" value="submit" name="signup" >Sign Up</input></center>
       </form>
+
       <div class="link">
         Already have an account? <a href="Login.php">Sign-In Here!</a>
       </div>
     </div>
+    <script>
+      var patientDiv = document.getElementById('additionalInfo');
+      var selectval = document.getElementById('Role-Type');
+      patientDiv.style.display = 'none'
+      if(selectval != null){
+        selectval.addEventListener("change", function() {
+          if (selectval.value == "Patient"){
+            patientDiv.style.display = 'block'
+            console.log(selectval.value);
+          } else {
+            patientDiv.style.display = 'none'
+          }
+        });
+      }
+    </script>
   </body>
 </html>

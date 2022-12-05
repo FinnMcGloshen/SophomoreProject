@@ -126,7 +126,7 @@ table {
   flex-direction: column;
   text-align: center;
 }
-input {
+.appts {
   margin-top: 15px;
   width: 200px;
   height: 50px;
@@ -167,4 +167,14 @@ input {
   to {
     transform: rotate(1turn);
   }
+}
+.box{
+  width: 20px;
+  height: 20px;
+}
+.date{
+  font-size: larger;
+}
+.textinput{
+  border: 1px solid black;
 }

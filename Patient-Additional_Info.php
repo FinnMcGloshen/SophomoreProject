@@ -86,7 +86,7 @@
           <h3>Admission Date:</h3>
           <br>
           <div class="password">
-            <input id="admissionDate" type="date" />
+            <input id="admissionDate" type="date" disabled="true"/>
           </div>
           <h3>Patient Name:</h3>
           <br>

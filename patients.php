@@ -12,11 +12,28 @@
             border:1px solid black
         }
     </style>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="Patients.css">
 </head>
 <body>
     <div class="patients">
-        <header>Patients</header>
-
+        <h2 class="Patient-Title-Page">Patients</h2>
+        <br>
+        <div class="Patient-Tbl-UI">
+        <table>
+            <tbody>
+                <tr class="Patient-Data">
+                    <th class="Patient-Data-Cells">Patient ID:</th>
+                    <th class="Patient-Data-Cells">Patient Name:</th>
+                    <th class="Patient-Data-Cells">Patient Age:</th>
+                    <th class="Patient-Data-Cells">Emergency Contact:</th>
+                    <th class="Patient-Data-Cells">Emergency Contact Name:</th>
+                    <th class="Patient-Data-Cells">Admission Date:</th>
+                </tr>
+    </div>
         <?php 
         $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
         or die('Could not connect: ' . pg_last_error());
@@ -40,11 +57,12 @@
     $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error());
     
     // Printing results in HTML
-    echo "<table>\n";
+    
+    // echo "<table>\n";
     while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
-        echo "\t<tr>\n";
+        echo "\t<tr class='Patient-Data'>\n";
         foreach ($line as $col_value) {
-            echo "\t\t<td>$col_value</td>\n";
+            echo "\t\t<td class='Patient-Data-Cells'>$col_value</td>\n";
         }
         echo "\t</tr>\n";
     }

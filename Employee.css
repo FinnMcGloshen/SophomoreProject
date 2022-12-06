@@ -67,7 +67,7 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 600px;
+  margin-top: 31%;
   margin-left: 600px;
   margin-right: 600px;
   text-align: center;
@@ -203,9 +203,9 @@ table {
 }
 .model-footer {
   padding: 1em;
-  background-color: rgba(0, 0, 0, 0.05);
+  /* background-color: rgba(0, 0, 0, 0.05); */
   display: flex;
-  justify-content: flex-end;
+ margin-left: 45%;
 }
 .model-confirm-btn {
   background-color: tomato;

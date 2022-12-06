@@ -44,8 +44,8 @@ $fields = array('fname','lname','email','role','phone','password','dob');
     // $fields = implode (" , ", $fields);
     // $query1 = 'DROP TABLE IF EXISTS accounts;';
     // $query2 = 'CREATE TABLE accounts (fname text, lname text, email text, role text, phone text, password text, dob date);';
-    $query3 = "INSERT INTO accounts(id,fname,lname,email,role,phone,password,dob)
-    VALUES ('$fname','$lname','$email','$role','$phone','$password','$dob');";
+    $query3 = "INSERT INTO accounts(fname,lname,email,role,phone,password,dob, family_code, emcontact, relation, admission_date, group_letter)
+    VALUES ('$fname','$lname','$email','$role','$phone','$password','$dob', NULL, NULL, NULL, NULL, NULL);";
     $additionalQuery = "INSERT INTO accounts(fname,lname,email,role,phone,password,dob, family_code, emcontact, relation, admission_date, group_letter)
     VALUES ('$fname','$lname','$email','$role','$phone','$password','$dob',$familyCode,'$emergencyContact','$relation','$admissionDate',NULL);";
     // $query4 = 'SELECT * FROM accounts;';
@@ -54,7 +54,7 @@ $fields = array('fname','lname','email','role','phone','password','dob');
     if($role == 'Patient'){
       $result3 = pg_query($additionalQuery) or die('Query failed: ' . pg_last_error());
     } else {
-      $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
+      $result = pg_query($query3) or die('Query failed: ' . pg_last_error());
     }
     echo 'Account created!';
     header('location: Login.php');

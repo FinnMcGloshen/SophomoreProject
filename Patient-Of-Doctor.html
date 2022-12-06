@@ -22,7 +22,7 @@
     <br />
     
     <div class="Main-Table">
-      <table>
+      <table id="main-table">
         <tbody>
           <tr class="table-title">
             <th class="table-data">Date</th>
@@ -89,8 +89,8 @@
         </div>
       </div>
     <div class="POD-Btn-Organise">
-      <button class="POD-Btn-1">Okay</button>
-      <button class="POD-Btn-2">Cancel</button>
+      <button class="POD-Btn-1" onclick="newrow()">Okay</button>
+      <button class="POD-Btn-2" onclick="cancel()">Cancel</button>
     </div>
     <div class="loader"></div>
     <script>
@@ -144,6 +144,33 @@
                 return "";// You can change this to your defualt value. 
             }
             return localStorage.getItem(v);
+        }
+        n =  new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        function newrow(){
+          var x = document.getElementById('main-table').insertRow(-1)
+          x.className = "table-title"
+          var date = x.insertCell(0)
+          date.className = "table-data"
+          var cell1 = x.insertCell(1)
+          cell1.className = "table-data"
+          var cell2 = x.insertCell(2)
+          cell2.className = "table-data"
+          var cell3 = x.insertCell(3)
+          cell3.className = "table-data"
+          var cell4 = x.insertCell(4)
+          cell4.className = "table-data"
+          date.innerHTML = m + "/" + d + "/" + y;
+          cell1.innerHTML = document.getElementById('new1').value
+          cell2.innerHTML = document.getElementById('new2').value
+          cell3.innerHTML = document.getElementById('new3').value
+          cell4.innerHTML = document.getElementById('new4').value
+        }
+        function cancel(){
+          var y = document.getElementById('main-table')
+          y.deleteRow(-1)
         }
     </script>
   </body>

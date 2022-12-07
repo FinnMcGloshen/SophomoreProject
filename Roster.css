@@ -8,37 +8,30 @@
   font-family: "Source Serif Pro", serif;
 }
 body {
-  background-color: lightslategrey;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
   font-family: "Source Serif Pro", serif;
 }
-nav {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  background: #fff;
-  width: 90px;
-  overflow: hidden;
-  transition: width 0.2s linear;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+.redirect-home {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 8%;
+  height: 40px;
+  font-family: "Source Serif Pro", serif;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #02c8db;
+  box-shadow: 3px 3px 8px black, -3px -3px 8px lightslategray;
+  transition: all 0.5s;
+  margin-top: 2vh;
+  margin-left: 1vw;
 }
 a {
-  position: relative;
-  color: rgb(85, 83, 83);
-  font-size: 18px;
-  display: table;
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 25px;
-}
-svg {
-  position: relative;
-  width: 70px;
-  height: 30px;
-  top: 14px;
-  font-size: 16px;
   text-align: center;
+  text-decoration: none;
+  color: black;
 }
 .millstream-nav-page {
   position: relative;
@@ -46,12 +39,15 @@ svg {
   margin-left: 10px;
   word-break: break-all;
 }
-a:hover {
-  background: #eee;
+.redirect-home:hover {
+  background-color: #50e5b9;
 }
 nav:hover {
   width: 250px;
   transition: all 0.5s ease;
+}
+.redirect-home:active {
+  background-color: #6ec581;
 }
 .log-out {
   position: absolute;
@@ -59,7 +55,7 @@ nav:hover {
 }
 .Welcome-Greeting-1 {
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 12vh;
 }
 .Welcome-Greeting-2 {
   text-align: center;
@@ -106,6 +102,9 @@ input {
   text-align: center;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
   font-size: larger;
+}
+.signin-btn1:hover {
+  background-color: #50e5b9;
 }
 .loader {
   position: fixed;

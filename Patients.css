@@ -1,7 +1,76 @@
 body {
   font-family: "Source Serif Pro", serif;
-  background: #e6e7ee;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
   color: #44476a;
+}
+.Btn-Fix {
+  margin-left: 2vw;
+  margin-top: 2.5vh;
+}
+svg {
+  margin-right: 7px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.Main-Table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-90%);
+  width: 1300px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+  border-radius: 12px;
+}
+.table-data {
+  padding: 10px;
+  text-align: center;
+  width: 300px;
+  font-size: 20px;
+}
+.table-title {
+  border-bottom: 1px solid #d1d9e6;
+}
+.Redirect-Home {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  height: 40px;
+  font-family: "Source Serif Pro", serif;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #02c8db;
+  box-shadow: 3px 3px 8px black, -3px -3px 8px #49def5;
+  transition: all 0.5s;
+}
+.Patient-Search-Functions-Tidy-Up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 3vh;
+}
+.Patient-Search-Style {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+input {
+  margin-top: 15px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background: #fff;
+  border-style: none;
+  font-family: "Source Serif Pro", serif;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+  border-radius: 12px;
+  font-size: larger;
 }
 .Patient-Title-Page {
   text-align: center;
@@ -63,6 +132,7 @@ td {
   background-color: #02c8db;
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   transition: all 0.5s;
+  margin-top: 10vh;
 }
 .Search-Btn:hover {
   background-color: #50e5b9;

@@ -8,7 +8,10 @@
   font-family: "Source Serif Pro", serif;
 }
 body {
-  background-color: lightcoral;
+  background: #3494E6; 
+background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6); 
+background: linear-gradient(to right, #EC6EAD, #3494E6);
+
   font-family: "Source Serif Pro", serif;
 }
 nav {

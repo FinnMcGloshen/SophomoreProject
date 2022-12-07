@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
-    rel="stylesheet"
-  />
-    <link rel="stylesheet" href="Patients-Home.css">
-    <title>Patient Home</title>
+    <title>Patient's Home
+    </title>
+    <style>
+        table,th,td{
+            border:1px solid black
+        }
+    </style>
 </head>
 <body>
-    <div class="Welcome-Greeting-1"><h2>Welcome!</h2></div>
-    <br>
-    <div class="Main-Table">
+    <div class="patientshome">
+        <header>Patient's Home</header>
+        <input type="text" class="patientid" placeholder="Patient ID"/>
+        <br>
+        <input type="text" class="patientname" placeholder="Patient Name"/>
+        <br>
+        <input type="text" class="date" placeholder="Date"/>
+        <br>
         <table>
           <tbody>
             <tr class="table-title">
@@ -72,16 +78,16 @@
               <td class="table-data">test</td>
               <td class="table-data">test</td>
             </tr>
-            <tr class="table-title">
-              <td class="table-data">test</td>
-              <td class="table-data">test</td>
-              <td class="table-data">test</td>
-              <td class="table-data">test</td>
-              <td class="table-data">test</td>
-              <td class="table-data">test</td>
-              <td class="table-data">test</td>
-              <td class="table-data">test</td>
-              <td class="table-data">test</td>
+            <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
             </tr>
           </tbody>
         </table>
@@ -101,4 +107,30 @@
         </div>
     </div>
 </body>
+<script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+
+let boxes = document.getElementsByClassName('box').length;
+    function save() {	
+      for(let i = 1; i <= boxes; i++){
+        var checkbox = document.getElementById(String(i));
+        localStorage.setItem("checkbox" + String(i), checkbox.checked);	
+      }
+    }
+    //for loading
+    for(let i = 1; i <= boxes; i++){
+      if(localStorage.length > 0){
+        var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
+        document.getElementById(String(i)).checked = checked;
+      }
+    }
+    window.addEventListener('change', save);
+    function clear(){
+      localStorage.clear();
+    }
+  </script>
 </html>

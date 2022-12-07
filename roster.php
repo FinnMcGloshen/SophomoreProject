@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roster
     </title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="Roster.css">
     <style>
         table,th,td{
             border:1px solid black
@@ -15,8 +20,26 @@
 </head>
 <body>
     <div class="roster">
-        <header>Roster</header>
-        <p>Date: <?php echo date("Y-m-d")?></p>
+    <h2 class="Welcome-Greeting-1">
+      Welcome to the Millstream Village Roster!
+    </h2>
+    <br />
+    <h2 class="Welcome-Greeting-2">Current Roster:</h2>
+    <br>
+        <h2 class="Welcome-Greeting-2">Date: <?php echo date("Y-m-d")?></h2>
+        <br>
+        <div class="Main-Table">
+        <table>
+          <tbody>
+            <tr class="table-title">
+              <th class="table-data">Supervisor</th>
+              <th class="table-data">Doctor</th>
+              <th class="table-data">Caregiver #1</th>
+              <th class="table-data">Caregiver #2</th>
+              <th class="table-data">Caregiver #3</th>
+              <th class="table-data">Caregiver #4</th>
+            </tr>
+    </div>
         <?php 
         $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
         or die('Could not connect: ' . pg_last_error());
@@ -34,11 +57,11 @@
     $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error());
     
     // Printing results in HTML
-    echo "<table>\n";
+    // echo "<table>\n";
     while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
-        echo "\t<tr>\n";
+        echo "\t<tr class='table-title'>\n";
         foreach ($line as $col_value) {
-            echo "\t\t<td>$col_value</td>\n";
+            echo "\t\t<td  class='table-data'>$col_value</td>\n";
         }
         echo "\t</tr>\n";
     }

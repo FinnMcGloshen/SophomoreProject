@@ -10,7 +10,7 @@
   font-family: "Source Serif Pro", serif;
 }
 body {
-  background-color: lightseagreen;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
 nav {
   position: absolute;
@@ -22,6 +22,11 @@ nav {
   width: 90px;
   overflow: hidden;
   transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.box{
+  height: 20px;
+  width: 20px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 a {
@@ -60,7 +65,7 @@ nav:hover {
 }
 .Welcome-Greeting-1 {
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 6vh;
 }
 .Welcome-Greeting-2 {
   text-align: center;
@@ -69,7 +74,7 @@ nav:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-47%, -70%);
+  transform: translate(-47%, -60%);
   width: 1390px;
   padding: 10px;
   background: #fff;
@@ -148,7 +153,6 @@ table {
   flex-direction: column;
   text-align: center;
 }
-<<<<<<< HEAD
 input {
   margin-top: 15px;
   width: 200px;
@@ -191,14 +195,4 @@ input {
     transform: rotate(1turn);
   }
 }
-=======
-/* input {
-    margin-top: 15px;
-    width: 200px;
-    height: 50px;
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
-    font-size: larger;
-} */
->>>>>>> 3503ea56e79c81bc6ddbfdc9b2ed8d19d47d2b4a
+

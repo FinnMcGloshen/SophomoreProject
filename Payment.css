@@ -14,10 +14,38 @@ body {
   color: #555;
   background-color: #ecf0f3;
 }
+.Btn-Fix {
+  margin-right: 40vh;
+  margin-bottom: 90vh;
+  margin-left: 4vw;
+}
+svg {
+  margin-right: 7px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.Redirect-Home {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  font-family: "Source Serif Pro", serif;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #02c8db;
+  box-shadow: 3px 3px 8px black, -3px -3px 8px #49def5;
+  transition: all 0.5s;
+}
 .Payment-Div {
   width: 700px;
   height: 800px;
   padding: 60px 35px 35px 35px;
+  margin-right: 29vw;
   border-radius: 40px;
   background-color: #ecf0f3;
   box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
@@ -225,6 +253,6 @@ body {
 .model-confirm-btn {
   background-color: tomato;
   font-family: "Source Serif Pro", serif;
-border: none;
-cursor: pointer;
+  border: none;
+  cursor: pointer;
 }

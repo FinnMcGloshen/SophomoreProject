@@ -10,13 +10,47 @@
     />
     <link rel="stylesheet" href="Doctor's-Appointment.css" />
     <title>Doctor's Appointment</title>
+    <script>
+      var returnData;
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              var myObj = JSON.parse(this.responseText);
+              // store data in global var
+              returnData = myObj;
+              console.log(returnData['doctors'][0])
+          }
+      };
+      xmlhttp.open("GET", "patientData.php", true);
+      // send global var
+      xmlhttp.send(returnData);
+      // test input 'id'
+      function inputCheck(){
+        var id = document.getElementById('id');
+        if(returnData[String(id.value)] != null){
+          document.getElementById('name').value = returnData[String(id.value)][0];
+        } else {
+          document.getElementById('name').value = '';
+        }
+      }
+      function selectPopulate(){
+        document.addEventListener('readystatechange', (e) => {
+          if (document.readyState == 'complete'){
+            var selectElem = document.getElementById('Roles');
+            for(var i = 0; i < returnData['doctors'].length; i++){
+              // set option val & text
+              var doctor = document.createElement('option')
+              doctor.value = returnData['doctors'][i]
+              doctor.text = returnData['doctors'][i]
+              selectElem.appendChild(doctor)
+            }
+          }
+        })
+      }
+      selectPopulate();
+    </script>
   </head>
   <body>
-    <div class="Btn-Fix">
-      <button class="Redirect-Home"><a href="Admin-Report.html"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
-      </svg>Go Back</a></button>
-    </div>
     <div class="Payment-Div">
       <div class="title">Doctor's Appointment:</div>
       <div class="input-fields">
@@ -38,7 +72,7 @@
               d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z"
             />
           </svg>
-          <input type="text" placeholder="Ex: 12345" />
+          <input oninput="inputCheck()" id="id" name="id" type="text" placeholder="Ex: 12345" />
         </div>
         <h3>Date:</h3>
         <br>
@@ -53,10 +87,6 @@
               </svg>
               <select name="Roles" id="Roles" class="Doctor-Selection">
                 <option value="" class="Doctor-Choices">Select a Doctor</option>
-                <option value="" class="Doctor-Choices">Dr. Lee</option>
-                <option value="" class="Doctor-Choices">Dr. Hubert</option>
-                <option value="" class="Doctor-Choices">Dr. Moon</option>
-                <option value="" class="Doctor-Choices">Dr. Forrest</option>
               </select>
         </div>
         <h3>Patient Name:</h3>
@@ -65,7 +95,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
               </svg>
-          <input type="text" placeholder="Ex: John Doe" />
+          <input disabled="true" id="name" name="name" type="text" placeholder="Ex: John Doe" />
         </div>
       </div>
       <div id="confirmation" class="model-container">
@@ -106,6 +136,7 @@
 } )
 function onCancel() {
         let confirmation = document.getElementById("confirmation");
+        // document.getElementById('name').value = 'CONFIRMED'
         confirmation.classList.remove("model-open");
       }
       function onConfirm() {

@@ -32,6 +32,7 @@ a {
   width: 300px;
   padding: 10px;
   margin-bottom: 25px;
+  font-family: "Source Serif Pro", serif;
 }
 svg {
   position: relative;
@@ -104,10 +105,11 @@ table {
   width: 150px;
   height: 45px;
   text-decoration: none;
+  font-family: "Source Serif Pro", serif;
   cursor: pointer;
   transition: all 0.5s;
   font-size: 24px;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px lightcyan;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px lightblue;
 }
 .Btn-Style-2 {
   margin-left: 10px;
@@ -121,7 +123,7 @@ table {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px lightcyan;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px lightblue;
   font-size: 24px;
 }
 .Btn-Style-1:hover {
@@ -147,7 +149,7 @@ table {
   flex-direction: column;
   text-align: center;
 }
-input {
+.search {
   margin-top: 15px;
   width: 200px;
   height: 50px;
@@ -189,4 +191,8 @@ input {
   to {
     transform: rotate(1turn);
   }
+}
+.box{
+  height: 20px;
+  width: 20px;
 }

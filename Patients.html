@@ -12,58 +12,110 @@
     <title>Patients Info</title>
 </head>
 <body>
+    <div class="Btn-Fix">
+        <button class="Redirect-Home"><a href="Admin-Report.html"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+        </svg>Go Back</a></button>
+      </div>
     <br>
     <h2 class="Patient-Title-Page">Patient Info</h2>
     <br>
-    <div class="Patient-Tbl-UI">
+    <div class="Main-Table">
         <table>
-            <tbody>
-                <tr class="Patient-Data">
-                    <th class="Patient-Data-Cells">Patient ID:</th>
-                    <th class="Patient-Data-Cells">Patient Name:</th>
-                    <th class="Patient-Data-Cells">Patient Age:</th>
-                    <th class="Patient-Data-Cells">Emergency Contact:</th>
-                    <th class="Patient-Data-Cells">Emergency Contact Name:</th>
-                    <th class="Patient-Data-Cells">Admission Date:</th>
-                </tr>
-                <tr class="Patient-Data">
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                </tr>
-                <tr class="Patient-Data">
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                </tr>
-                <tr class="Patient-Data">
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                </tr>
-                <tr class="Patient-Data">
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                    <td class="Patient-Data-Cells">Test</td>
-                </tr>
-            </tbody>
+          <tbody>
+            <tr class="table-title">
+              <th class="table-data">Patient ID:</th>
+              <th class="table-data">Patient Name:</th>
+              <th class="table-data">Patient Age:</th>
+              <th class="table-data">Emergency Contact Number:</th>
+              <th class="table-data">Emergency Contact Name:</th>
+              <th class="table-data">Admission Date:</th>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+          </tbody>
         </table>
-    </div>
+      </div>
     <br>
     <h2 class="Patient-Search-Title">Search By:</h2>
-    
+    <div class="Patient-Search-Functions-Tidy-Up">
+        <div class="Patient-Search-Style">
+          <h2 class="Search-Title">Patient ID:</h2>
+          <input type="number" placeholder="Ex: 12345" />
+        </div>
+        <div class="Patient-Search-Style">
+          <h2 class="Search-Title">Patient Name:</h2>
+          <input
+            type="text"
+            placeholder="Ex: John Doe"
+          />
+        </div>
+        <div class="Patient-Search-Style">
+            <h2 class="Search-Title">Patient Age:</h2>
+            <input
+              type="number"
+              min="1"
+              max="120"
+              step="1"
+              placeholder="Ex: 999"
+            />
+          </div>
+          <div class="Patient-Search-Style">
+            <h2 class="Search-Title">Emergency Contact #:</h2>
+            <input type="number" placeholder="Ex: 12345" />
+          </div>
+          <div class="Patient-Search-Style">
+            <h2 class="Search-Title">Emergency Contact Name:</h2>
+            <input
+              type="text"
+              placeholder="Ex: John Doe"
+            />
+          </div>
+          <div class="Patient-Search-Style">
+              <h2 class="Search-Title">Admission Date:</h2>
+              <input
+                type="date"
+              />
+            </div>
+      </div>
     <div class="Search-Btn-Style">
     <button class="Search-Btn">Search</button>
 </div>

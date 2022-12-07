@@ -11,7 +11,7 @@
       $id = intval($_POST['id']);
       $dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
         or die('Could not connect: ' . pg_last_error());
-      $result = pg_query($dbconn, "UPDATE patients SET group_letter = '$group' WHERE id = $id;");
+      $result = pg_query($dbconn, "UPDATE accounts SET group_letter = '$group' WHERE id = $id;");
       pg_close($dbconn);
     }
     ?>
@@ -23,6 +23,7 @@
               var myObj = JSON.parse(this.responseText);
               // store data in global var
               returnData = myObj;
+              console.log(returnData)
           }
       };
       xmlhttp.open("GET", "patientData.php", true);
@@ -31,10 +32,13 @@
       // test input 'id'
       function inputCheck(){
         var id = document.getElementById('id');
+        var admissionDate = document.getElementById('admissionDate');
         if(returnData[String(id.value)] != null){
-          document.getElementById('name').value = returnData[String(id.value)];
+          document.getElementById('name').value = returnData[String(id.value)][0];
+          admissionDate.value = returnData[String(id.value)][1];
         } else {
           document.getElementById('name').value = '';
+          admissionDate.value = '';
         }
       }
     </script>
@@ -82,7 +86,7 @@
           <h3>Admission Date:</h3>
           <br>
           <div class="password">
-            <input type="date" placeholder="Ex: $30.00" />
+            <input id="admissionDate" type="date" disabled="true"/>
           </div>
           <h3>Patient Name:</h3>
           <br>

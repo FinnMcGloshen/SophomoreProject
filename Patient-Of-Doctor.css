@@ -24,7 +24,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -75%);
-  width: 1000px;
+  width: 1150px;
   padding: 10px;
   background: #fff;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
@@ -107,7 +107,7 @@ table {
   text-align: center;
   margin-top: 42vh;
 }
-input {
+.textinput {
   margin-top: 15px;
   width: 200px;
   height: 50px;
@@ -148,4 +148,15 @@ input {
   to {
     transform: rotate(1turn);
   }
+}
+.date{
+  font-size: larger;
+}
+#topinput1,#topinput2{
+  margin-left: 46%;
+}
+.appts{
+  border: 1px solid lightgray;
+  height: 30px;
+  font-size: medium;
 }

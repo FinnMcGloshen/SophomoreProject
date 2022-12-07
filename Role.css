@@ -9,11 +9,33 @@
 }
 body {
   font-family: "Source Serif Pro", serif;
-  background: #49def5;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+.redirect-home {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 8%;
+  height: 40px;
+  font-family: "Source Serif Pro", serif;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #02c8db;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+  transition: all 0.5s;
+  margin-top: 2vh;
+  margin-left: 1vw;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
 .Welcome-Greeting-1 {
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 .Welcome-Greeting-2 {
   text-align: center;
@@ -99,7 +121,7 @@ select {
   cursor: pointer;
   transition: all 0.5s;
   font-size: 24px;
-  box-shadow: 3px 3px 8px black, -3px -3px 8px #49def5;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
 }
 .Btn-Style-2 {
   margin-left: 10px;
@@ -113,7 +135,7 @@ select {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s;
-  box-shadow: 3px 3px 8px black, -3px -3px 8px #49def5;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   font-size: 24px;
 }
 .Btn-Style-1:hover {

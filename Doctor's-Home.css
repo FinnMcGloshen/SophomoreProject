@@ -122,14 +122,14 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 38vh;
+  margin-top: 20%;
 }
 .Doctor-Search-Style {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-input {
+.appts {
   margin-top: 15px;
   width: 200px;
   height: 50px;
@@ -170,4 +170,47 @@ input {
   to {
     transform: rotate(1turn);
   }
+}
+.box{
+  width: 20px;
+  height: 20px;
+}
+.date{
+  font-size: larger;
+}
+.textinput{
+  border: 1px solid black;
+}
+.patient-btns{
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  float: left;
+  margin-left: 17%;
+  margin-top: 3%;
+}
+.one{
+  margin-top: -3%;
+}
+.patient-btn{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 35px;
+  border-style: none;
+  background-color: #02c8db;
+  color: #fff;
+  width: 150px;
+  height: 45px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 22px;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px lightcoral;
+  margin-top: 15%;
+}
+.patient-btn:hover {
+  background-color: #50e5b9;
+}
+.patient-btn:active {
+  background-color: #6ec581;
 }

@@ -35,7 +35,7 @@ table {
 .Welcome-Greeting-1 {
   text-align: center;
   margin-top: 11vh;
-  margin-bottom: -5% ;
+  margin-bottom: 2% ;
 }
 .Welcome-Greeting-2 {
   text-align: center;
@@ -50,7 +50,8 @@ table {
   background: #fff;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
   border-radius: 12px;
-  margin-bottom: -50px;
+  margin-bottom: -5%;
+  margin-top: 2%;
 }
 .table-data {
   padding: 10px;
@@ -97,7 +98,7 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 31%;
+  margin-top: 21%;
   margin-left: 600px;
   margin-right: 600px;
   text-align: center;
@@ -135,7 +136,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 10vh;
+  margin-top: 2%;
   margin-left: 600px;
   margin-right: 600px;
 }

@@ -256,3 +256,6 @@ a {
   border: none;
   cursor: pointer;
 }
+.success-msg{
+ visibility: hidden;
+}

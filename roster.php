@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
     rel="stylesheet"
   />
-    <!-- <link rel="stylesheet" href="Roster.css"> -->
+    <link rel="stylesheet" href="Roster.css">
     <style>
         table,th,td{
             border:1px solid black
@@ -46,7 +46,7 @@
             </tr>
     </div>
         <?php 
-        $dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
+        $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
         or die('Could not connect: ' . pg_last_error());
     
     // Performing SQL query

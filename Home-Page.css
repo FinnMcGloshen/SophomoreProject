@@ -46,8 +46,6 @@ a:link {
   width: 290px;
   height: 354px;
   border-radius: 30px;
-  background: #cdcdcd;
-  box-shadow: inset 20px 20px 60px #cdcdcd, inset -20px -20px 60px #cdcdcd;
   text-align: center;
 }
 .Card-Title {

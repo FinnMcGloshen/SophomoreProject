@@ -33,23 +33,23 @@ $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin
     or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query
-$query1 = 'DROP TABLE IF EXISTS employees;';
-$query2 = 'CREATE TABLE employees (id int, name text, role text, salary int);';
-$query3 = "INSERT INTO employees(id,name,role,salary)
-VALUES (1,'John Smith', 'Admin', 120000),
-(2,'Dan Miller', 'Supervisor', 100000),
-(3,'Mary Lawrence', 'Supervisor', 100000),
-(4,'Christine Philips', 'Doctor', 90000),
-(5,'Jim Spencer', 'Doctor', 90000),
-(6,'Wendy Harrington', 'Doctor', 90000),
-(7,'Barbara Stevens', 'Caregiver', 80000),
-(8,'Steve Johnson', 'Caregiver', 80000),
-(9,'Craig Morgan', 'Caregiver', 80000),
-(10,'Abby Watson', 'Caregiver', 80000);";
-$query4 = 'SELECT * FROM employees;';
-$result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
-$result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
-$result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
+// $query1 = 'DROP TABLE IF EXISTS employees;';
+// $query2 = 'CREATE TABLE employees (id int, name text, role text, salary int);';
+// $query3 = "INSERT INTO employees(id,name,role,salary)
+// VALUES (1,'John Smith', 'Admin', 120000),
+// (2,'Dan Miller', 'Supervisor', 100000),
+// (3,'Mary Lawrence', 'Supervisor', 100000),
+// (4,'Christine Philips', 'Doctor', 90000),
+// (5,'Jim Spencer', 'Doctor', 90000),
+// (6,'Wendy Harrington', 'Doctor', 90000),
+// (7,'Barbara Stevens', 'Caregiver', 80000),
+// (8,'Steve Johnson', 'Caregiver', 80000),
+// (9,'Craig Morgan', 'Caregiver', 80000),
+// (10,'Abby Watson', 'Caregiver', 80000);";
+$query4 = 'SELECT * FROM employees ORDER BY id;';
+// $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
+// $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
+// $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
 $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
@@ -62,42 +62,40 @@ while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
     echo "\t</tr>\n";
 }
 echo "</table>\n";
-
+if(isset($_POST['submit'])&&!empty($_POST['submit'])){
+  $empid = $_POST['empid'];
+  $newsalary = $_POST['newsalary'];
+  $datatoupdate = array('salary'=>$newsalary);
+  $condition = array('id'=>$empid);
+  $res = pg_update($dbconn, 'employees', $datatoupdate, $condition);
+  header("Refresh:0");
+  if($res){
+    echo "data is updated: $res\n";
+  } else{
+    echo "update failed";
+  }
+}
 // Free resultset
 pg_free_result($result4);
 
 // Closing connection
 pg_close($dbconn);
 ?>
-        <!-- <table>
-            <tr>
-                <td>ID</td>
-                <td>Name</td>
-                <td>Role</td>
-                <td>Salary</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table> -->
         </div>
         <div class="Emp-Input-Tidy-Up">
       <div class="Emp-Input-Data1">
         <br />
         <form method="POST">
-        <input type="text" placeholder="Emp ID #:" id="empid"/>
+        <input type="text" placeholder="Emp ID #:" id="empid" name="empid"/>
         <br />
       </div>
       <div class="Emp-Input-Data2">
         <br />
-        <input type="number" min="0.00" step="0.01" placeholder="New Salary:" id="newsalary"/>
+        <input type="number" min="0.00" step="0.01" placeholder="New Salary:" id="newsalary" name="newsalary"/>
       </div>
     </div>
     <br />
-    <div id="confirmation" class="model-container">
+    <!-- <div id="confirmation" class="model-container">
       <div class="model">
         <section>
           <header class="model-header">
@@ -115,10 +113,11 @@ pg_close($dbconn);
           </footer>
         </section>
       </div>
-    </div>
+    </div> -->
     <div class="Emp-Btn-Style">
-      <button class="Emp-Pg-Btn1" onclick="onDelete()">Okay</button>
+      <input class="Emp-Pg-Btn1" onclick="onDelete()" name="submit" placeholder="Okay" type="submit"></input>
       <button class="Emp-Pg-Btn2">Cancel</button>
+</form>
     </div>
     <br />
     <div class="loader"></div>

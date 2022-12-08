@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Reg-Approval.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Registration Approval</title>
+  </head>
+  <body>
+    <button class="redirect-home">
+      <a href="Admin-Report.html"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-90deg-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"
+          />
+        </svg>
+        Go Back</a
+      >
+    </button>
+    <h2 class="Welcome-Greeting-1">
+      Millstream Village Registration Approval:
+    </h2>
+    <br />
+    <div class="Main-Table">
+        <table>
+          <tbody>
+            <tr class="table-title">
+              <th class="table-data">Name:</th>
+              <th class="table-data">Role:</th>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+            <tr class="table-title">
+              <td class="table-data">test</td>
+              <td class="table-data">test</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="confirmation" class="model-container">
+        <div class="model">
+          <section>
+            <header class="model-header">
+              <span onclick="onCancel()"></span>
+              <h2>Are you sure you want to confirm?</h2>
+            </header>
+            <section class="model-content">
+              <p>This action cannot be undone!</p>
+            </section>
+            <footer class="model-footer">
+              <button class="model-btn" onclick="onCancel()">Cancel</button>
+              <button class="model-btn model-confirm-btn" onclick="onConfirm()">
+                Confirm
+              </button>
+            </footer>
+          </section>
+        </div>
+      </div>
+      <div class="Title-Fix">
+      <h2 class="Title-2">Approve Registrations?</h2>
+    </div>
+    <div class="Check-Box-Tidy-Up">
+      
+    </div>
+      <div class="Family-Btn-Tidy-Up">
+        <button class="Btn-Style-1" onclick="onDelete()">Okay</button>
+        <button class="Btn-Style-2">Cancel</button>
+      </div>
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("loader-hidden");
+
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild("loader");
+        });
+      });
+      function onCancel() {
+        let confirmation = document.getElementById("confirmation");
+        confirmation.classList.remove("model-open");
+      }
+      function onConfirm() {
+        onCancel();
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("confirmation")
+          .addEventListener("click", onCancel);
+        document
+          .querySelector(".model")
+          .addEventListener("click", (e) => e.stopPropagation());
+      });
+      function onDelete() {
+        let confirmation = document.getElementById("confirmation");
+        if (!confirmation.classList.contains("model-open")) {
+          confirmation.classList.add("model-open");
+        }
+      }
+    </script>
+  </body>
+</html>

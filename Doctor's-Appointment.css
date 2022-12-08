@@ -252,3 +252,7 @@ input::-webkit-datetime-edit-fields-wrapper {
 border: none;
 cursor: pointer;
 }
+.successmsg{
+  display: flex;
+  flex-direction: column;
+}

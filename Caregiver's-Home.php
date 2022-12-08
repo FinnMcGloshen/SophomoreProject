@@ -99,7 +99,7 @@
         </li>
       </ul>
     </nav>
-    <h2 class="Welcome-Greeting-1">Welcome Back!</h2>
+    <h2 class="Welcome-Greeting-1">Caregiver's Home Page</h2>
     <br />
     <h2 class="Welcome-Greeting-2">List of Patient's Duty Today:</h2>
     <br />

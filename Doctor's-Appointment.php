@@ -124,6 +124,8 @@
       <br />
     </div>
     <div class="loader"></div>
+    <!-- <h3 class="successmsg">Doctor's Appointment made for:</h3>
+    <h3></h3> -->
     <script>
       window.addEventListener("load", () =>{
     const loader = document.querySelector(".loader");
@@ -155,6 +157,9 @@ function onCancel() {
         if (!confirmation.classList.contains("model-open")) {
           confirmation.classList.add("model-open");
         }
+      }
+      function show(){
+
       }
     </script>
   </body>

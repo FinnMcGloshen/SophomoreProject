@@ -249,3 +249,11 @@ select {
 border: none;
 cursor: pointer;
 }
+.newrole{
+  display: flex;
+  justify-content: space-evenly;
+}
+.Btn-Fix {
+  margin-left: 2vw;
+  margin-top: 0.5vh;
+}

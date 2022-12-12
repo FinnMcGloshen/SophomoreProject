@@ -8,9 +8,9 @@
   font-family: "Source Serif Pro", serif;
 }
 body {
-  background: #3494E6; 
-background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6); 
-background: linear-gradient(to right, #EC6EAD, #3494E6);
+  background: #3494e6;
+  background: -webkit-linear-gradient(to right, #ec6ead, #3494e6);
+  background: linear-gradient(to right, #ec6ead, #3494e6);
 
   font-family: "Source Serif Pro", serif;
 }
@@ -171,17 +171,17 @@ table {
     transform: rotate(1turn);
   }
 }
-.box{
+.box {
   width: 20px;
   height: 20px;
 }
-.date{
+.date {
   font-size: larger;
 }
-.textinput{
+.textinput {
   border: 1px solid black;
 }
-.patient-btns{
+.patient-btns {
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -189,10 +189,10 @@ table {
   margin-left: 17%;
   margin-top: 3%;
 }
-.one{
+.one {
   margin-top: -3%;
 }
-.patient-btn{
+.patient-btn {
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 35px;

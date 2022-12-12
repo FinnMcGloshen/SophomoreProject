@@ -5,14 +5,14 @@ body {
 }
 .Btn-Fix {
   margin-left: 2vw;
-  margin-top: 0.5vh;
+  margin-top: 2vh;
 }
 svg {
   margin-right: 7px;
 }
 a {
   text-decoration: none;
-  color: #fff;
+  color: black;
 }
 .Redirect-Home {
   outline: none;
@@ -35,6 +35,7 @@ table {
 .Welcome-Greeting-1 {
   text-align: center;
   margin-top: 11vh;
+  margin-bottom: 2% ;
 }
 .Welcome-Greeting-2 {
   text-align: center;
@@ -49,6 +50,8 @@ table {
   background: #fff;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
   border-radius: 12px;
+  margin-bottom: -5%;
+  margin-top: 2%;
 }
 .table-data {
   padding: 10px;
@@ -95,7 +98,7 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 31%;
+  margin-top: 21%;
   margin-left: 600px;
   margin-right: 600px;
   text-align: center;
@@ -108,14 +111,14 @@ input {
   background: #fff;
   border-style: none;
   font-family: "Source Serif Pro", serif;
-  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+  /* box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1; */
   border-radius: 12px;
   font-size: larger;
 }
 .Emp-Input-Data1,
 .Emp-Input-Data2 {
-  margin-bottom: 30px;
-  border-radius: 25px;
+  margin-bottom: 5px;
+  border-radius: 20px;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
 }
 .Emp-Input-Data1 input,
@@ -133,7 +136,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 10vh;
+  margin-top: 2%;
   margin-left: 600px;
   margin-right: 600px;
 }
@@ -254,18 +257,61 @@ input {
 }
 .model-footer {
   padding: 1em;
-  /* background-color: rgba(0, 0, 0, 0.05); */
+  background-color: rgba(0, 0, 0, 0.05);
   display: flex;
- margin-left: 45%;
+  justify-content: flex-end;
 }
 .model-confirm-btn {
   background-color: tomato;
   font-family: "Source Serif Pro", serif;
-<<<<<<< HEAD
   border: none;
   cursor: pointer;
+<<<<<<< HEAD
+}
+.popup {
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+.popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+#svg-style{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
 =======
-border: none;
-cursor: pointer;
->>>>>>> 50234fe8353971d89d64ec927626daba97216811
+  border: none;
+  cursor: pointer;
+>>>>>>> d95359f8d146b9f579cc4e00b7fe05bdb6bbb91c
 }

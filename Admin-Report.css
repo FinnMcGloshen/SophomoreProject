@@ -24,7 +24,7 @@ nav {
   transition: width 0.2s linear;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.box{
+.box {
   height: 20px;
   width: 20px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);

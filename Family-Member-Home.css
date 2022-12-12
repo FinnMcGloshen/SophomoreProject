@@ -192,7 +192,11 @@ table {
     transform: rotate(1turn);
   }
 }
-.box{
+.box {
   height: 20px;
   width: 20px;
+}
+.Btn-Fix {
+  margin-left: 2vw;
+  margin-top: 0.5vh;
 }

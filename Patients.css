@@ -12,13 +12,13 @@ svg {
 }
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .Main-Table {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-90%);
+  transform: translate(-50%, -90%);
   width: 1300px;
   padding: 10px;
   background: #fff;
@@ -46,7 +46,7 @@ a {
   font-weight: 700;
   text-align: center;
   background-color: #02c8db;
-  box-shadow: 3px 3px 8px black, -3px -3px 8px #49def5;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   transition: all 0.5s;
 }
 .Patient-Search-Functions-Tidy-Up {
@@ -128,12 +128,12 @@ td {
   border-radius: 30px;
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: black;
   text-align: center;
   background-color: #02c8db;
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   transition: all 0.5s;
-  margin-top: 10vh;
+  margin-top: 8vh;
 }
 .Search-Btn:hover {
   background-color: #50e5b9;

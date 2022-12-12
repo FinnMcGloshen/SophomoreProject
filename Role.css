@@ -15,7 +15,7 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
-  width: 8%;
+  width: 120px;
   height: 40px;
   font-family: "Source Serif Pro", serif;
   border-radius: 30px;
@@ -26,7 +26,7 @@ body {
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   transition: all 0.5s;
   margin-top: 2vh;
-  margin-left: 1vw;
+  margin-left: 2vw;
 }
 a {
   text-align: center;
@@ -92,14 +92,14 @@ input {
   font-size: larger;
 }
 select {
-    margin-top: 15px;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    background: #fff;
-    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
-    border-radius: 12px;
-    font-size: larger;
+  margin-top: 15px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background: #fff;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+  border-radius: 12px;
+  font-size: larger;
 }
 .Family-Btn-Tidy-Up {
   display: flex;
@@ -113,6 +113,7 @@ select {
   margin-right: 10px;
   border-radius: 35px;
   border-style: none;
+  font-family: "Source Serif Pro", serif;
   background-color: #02c8db;
   color: #fff;
   width: 150px;
@@ -128,6 +129,7 @@ select {
   margin-right: 10px;
   border-radius: 35px;
   border-style: none;
+  font-family: "Source Serif Pro", serif;
   background-color: hsl(9, 98%, 43%);
   width: 150px;
   height: 45px;
@@ -246,6 +248,49 @@ select {
 .model-confirm-btn {
   background-color: tomato;
   font-family: "Source Serif Pro", serif;
-border: none;
-cursor: pointer;
+  border: none;
+  cursor: pointer;
+}
+.popup {
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+.popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+#svg-style{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
 }

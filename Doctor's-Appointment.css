@@ -295,3 +295,7 @@ input::-webkit-datetime-edit-fields-wrapper {
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
 }
+.successmsg{
+  display: flex;
+  flex-direction: column;
+}

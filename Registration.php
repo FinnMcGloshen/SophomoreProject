@@ -8,7 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="Registration.css" /> -->
+    
+    <link rel="stylesheet" href="Registration.css" />
     <title>Registration</title>
   </head>
     <?php

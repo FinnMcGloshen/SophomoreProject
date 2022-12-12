@@ -35,6 +35,7 @@ table {
 .Welcome-Greeting-1 {
   text-align: center;
   margin-top: 11vh;
+  margin-bottom: 2% ;
 }
 .Welcome-Greeting-2 {
   text-align: center;
@@ -49,6 +50,8 @@ table {
   background: #fff;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
   border-radius: 12px;
+  margin-bottom: -5%;
+  margin-top: 2%;
 }
 .table-data {
   padding: 10px;
@@ -95,7 +98,7 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 31%;
+  margin-top: 21%;
   margin-left: 600px;
   margin-right: 600px;
   text-align: center;
@@ -108,14 +111,14 @@ input {
   background: #fff;
   border-style: none;
   font-family: "Source Serif Pro", serif;
-  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
+  /* box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1; */
   border-radius: 12px;
   font-size: larger;
 }
 .Emp-Input-Data1,
 .Emp-Input-Data2 {
-  margin-bottom: 30px;
-  border-radius: 25px;
+  margin-bottom: 5px;
+  border-radius: 20px;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
 }
 .Emp-Input-Data1 input,
@@ -133,7 +136,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 10vh;
+  margin-top: 2%;
   margin-left: 600px;
   margin-right: 600px;
 }
@@ -263,6 +266,7 @@ input {
   font-family: "Source Serif Pro", serif;
   border: none;
   cursor: pointer;
+<<<<<<< HEAD
 }
 .popup {
   width: 400px;
@@ -306,4 +310,8 @@ input {
   margin-top: -50px;
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
+=======
+  border: none;
+  cursor: pointer;
+>>>>>>> d95359f8d146b9f579cc4e00b7fe05bdb6bbb91c
 }

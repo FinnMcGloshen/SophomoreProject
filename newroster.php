@@ -36,3 +36,4 @@ echo $myJSON;
 
 pg_close($dbconn);
 ?>
+

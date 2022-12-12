@@ -256,6 +256,7 @@ a {
   border: none;
   cursor: pointer;
 }
+<<<<<<< HEAD
 .popup {
   width: 400px;
   background: #fff;
@@ -299,3 +300,8 @@ a {
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
 }
+=======
+.success-msg{
+ visibility: hidden;
+}
+>>>>>>> d95359f8d146b9f579cc4e00b7fe05bdb6bbb91c

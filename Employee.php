@@ -89,13 +89,10 @@ pg_close($dbconn);
         </div>
         <div class="Emp-Input-Tidy-Up">
       <div class="Emp-Input-Data1">
-        <br />
         <form method="POST">
         <input type="text" placeholder="Emp ID #:" id="empid" name="empid"/>
-        <br />
       </div>
       <div class="Emp-Input-Data2">
-        <br />
         <input type="number" min="0.00" step="0.01" placeholder="New Salary:" id="newsalary" name="newsalary"/>
       </div>
     </div>
@@ -120,6 +117,7 @@ pg_close($dbconn);
       </div>
     </div> -->
     <div class="Emp-Btn-Style">
+      
       <input class="Emp-Pg-Btn1" onclick="onDelete()" name="submit" placeholder="Okay" type="submit"></input>
       <button class="Emp-Pg-Btn2">Cancel</button>
 </form>

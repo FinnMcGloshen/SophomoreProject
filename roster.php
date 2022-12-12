@@ -9,7 +9,7 @@
     href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
     rel="stylesheet"
   />
-    <!-- <link rel="stylesheet" href="Roster.css"> -->
+    <link rel="stylesheet" href="Roster.css">
     <style>
         table,th,td{
             border:1px solid black
@@ -99,40 +99,39 @@
         <h2 id="date_head" class="Welcome-Greeting-2">Date:</h2>
         <br>
         <div class="Main-Table">
-            <table style="visibility: hidden">
-                <thead>
-                    <tr class="table-title">
-                        <th class="table-data">Date</th>
-                        <th class="table-data">Supervisor</th>
-                        <th class="table-data">Doctor</th>
-                        <th class="table-data">Caregiver #1</th>
-                        <th class="table-data">Caregiver #2</th>
-                        <th class="table-data">Caregiver #3</th>
-                        <th class="table-data">Caregiver #4</th>
-                    </tr> 
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="query_data"></td>
-                        <td class="query_data"></td>
-                        <td class="query_data"></td>
-                        <td class="query_data"></td>
-                        <td class="query_data"></td>
-                        <td class="query_data"></td>
-                        <td class="query_data"></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td class="query_data">Patient Group </td>
-                        <td class="query_data">Patient Group </td>
-                        <td class="query_data">Patient Group </td>
-                        <td class="query_data">Patient Group </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
+        <table style="visibility: hidden">
+            <thead>
+                <tr class="table-title">
+                    <th class="table-data">Date</th>
+                    <th class="table-data">Supervisor</th>
+                    <th class="table-data">Doctor</th>
+                    <th class="table-data">Caregiver #1</th>
+                    <th class="table-data">Caregiver #2</th>
+                    <th class="table-data">Caregiver #3</th>
+                    <th class="table-data">Caregiver #4</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="query_data"></td>
+                    <td class="query_data"></td>
+                    <td class="query_data"></td>
+                    <td class="query_data"></td>
+                    <td class="query_data"></td>
+                    <td class="query_data"></td>
+                    <td class="query_data"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="query_data">Patient Group </td>
+                    <td class="query_data">Patient Group </td>
+                    <td class="query_data">Patient Group </td>
+                    <td class="query_data">Patient Group </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

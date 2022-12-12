@@ -149,13 +149,14 @@ table {
     transform: rotate(1turn);
   }
 }
-.date{
+.date {
   font-size: larger;
 }
-#topinput1,#topinput2{
+#topinput1,
+#topinput2 {
   margin-left: 46%;
 }
-.appts{
+.appts {
   border: 1px solid lightgray;
   height: 30px;
   font-size: medium;

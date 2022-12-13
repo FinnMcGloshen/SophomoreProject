@@ -90,19 +90,20 @@ pg_close($dbconn);
 ?>
   <body>
   <div class="choices" id="input-fields">
+  <form action="" method="POST">
       <select name="role" id="Role-Type" onchange="toggleDiv(this.value)">
-        <option value="">Select an Option:</option>
-        <option value="2">Admin</option>
-        <option value="2">Supervisor</option>
-        <option value="2">Caregiver</option>
-        <option value="2">Doctor</option>
-        <option value="2">Family Member</option>
-        <option value="1">Patient</option>
+        <option value=""> Select an Option:</option>
+        <option value="Admin">Admin</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Caregiver">Caregiver</option>
+        <option value="Doctor">Doctor</option>
+        <option value="Family Member">Family Member</option>
+        <option value="Patient" name="role">Patient</option>
       </select>
     </div>
     <div class="New-Roster-Div" id="Form-1">
       <h2><center>Create an Account:</center></h2>
-      <form action="" method="POST">
+      
       <div class="input-fields">
         <div class="New-Roster-Section-1">
           <div class="Section-1-Style">
@@ -353,16 +354,19 @@ pg_close($dbconn);
                 alert("Please select an option!");
                 const Form1 = document.getElementById("Form-1");
 
-              Form1.style.display = value == 1 ? "block" : "none";
+              Form1.style.display = value == 'Patient' ? "block" : "none";
 
             }
+            else if(value=="Patient"){
             const Form1 = document.getElementById("Form-1");
-
-            Form1.style.display = value == 1 ? "block" : "none";
-
+            Form1.style.display = value == 'Patient' ? "block" : "none";
+            
+            }
+            else{
             const Form2 = document.getElementById("Form-2");
 
-            Form2.style.display = value == 2 ? "block" : "none";
+            Form2.style.display = value == 'Admin'||'Supervisor'||'Doctor'||'Caregiver'||'Family Member' ? "block" : "none";
+            }
         }
     </script>
   </body>

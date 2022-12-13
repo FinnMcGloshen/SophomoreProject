@@ -14,7 +14,7 @@
   </head>
     <?php
 // Connecting, selecting database
-$dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
+$dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
     or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query
@@ -348,6 +348,22 @@ pg_close($dbconn);
           }
         });
       }
+      function toggleDiv(value){
+            if (value == ""){
+                alert("Please select an option!");
+                const Form1 = document.getElementById("Form-1");
+
+              Form1.style.display = value == 1 ? "block" : "none";
+
+            }
+            const Form1 = document.getElementById("Form-1");
+
+            Form1.style.display = value == 1 ? "block" : "none";
+
+            const Form2 = document.getElementById("Form-2");
+
+            Form2.style.display = value == 2 ? "block" : "none";
+        }
     </script>
   </body>
 </html>

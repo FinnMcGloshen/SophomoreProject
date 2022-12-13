@@ -14,7 +14,7 @@
   <body>
     <div class="POD-Input-Style">
       <h2>Patient:</h2>
-      <input type="text" class="textinput" id="topinput1">
+      <h2 id="pname">
    <br>
       <h2>Current Medicine:</h2>
       <input type="text" class="textinput" id="topinput2">
@@ -94,6 +94,8 @@
     </div>
     <div class="loader"></div>
     <script>
+      document.getElementById('pname').innerHTML = localStorage.getItem('p1');
+
       window.addEventListener("load", () =>{
     const loader = document.querySelector(".loader");
 

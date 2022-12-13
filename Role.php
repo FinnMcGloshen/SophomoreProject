@@ -30,19 +30,19 @@ $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin
     or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query
-$query1 = 'DROP TABLE IF EXISTS roles;';
-$query2 = 'CREATE TABLE roles (role1 text, accesslevel int);';
-$query3 = "INSERT INTO roles(role1,accesslevel)
-VALUES ('Admin',6),
-('Supervisor',5),
-('Doctor',4),
-('Caregiver',3),
-('Patient',2),
-('Family Member',1);";
-$query4 = 'SELECT * FROM roles;';
-$result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
-$result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
-$result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
+// $query1 = 'DROP TABLE IF EXISTS roles;';
+// $query2 = 'CREATE TABLE roles (role1 text, accesslevel int);';
+// $query3 = "INSERT INTO roles(role1,accesslevel)
+// VALUES ('Admin',6),
+// ('Supervisor',5),
+// ('Doctor',4),
+// ('Caregiver',3),
+// ('Patient',2),
+// ('Family Member',1);";
+$query4 = 'SELECT * FROM roles ORDER BY accesslevel desc;';
+// $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
+// $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
+// $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
 $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
@@ -56,6 +56,33 @@ while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
 }
 echo "</table>\n";
 
+if(isset($_POST['insert'])&&!empty($_POST['insert'])){
+  $newrole = $_POST['newrole'];
+  $accesslvl = $_POST['accesslvl'];
+  $sql = "INSERT INTO roles (role1,accesslevel)
+  VALUES ('$newrole','$accesslvl');";
+  $result = pg_query($sql) or die('Query failed: ' . pg_last_error());
+  header("Refresh:0");
+  // if($result){
+  //   echo "data is inserted: $result\n";
+  // } else{
+  //   echo "insert failed";
+  }
+// }
+
+if(isset($_POST['delete'])&&!empty($_POST['delete'])){
+  $newrole = $_POST['newrole'];
+  $accesslvl = $_POST['accesslvl'];
+  $sql = "DELETE FROM roles WHERE role1 = '$newrole';";
+  $result = pg_query($sql) or die('Query failed: ' . pg_last_error());
+  header("Refresh:0");
+  // if($result){
+  //   echo "data is inserted: $result\n";
+  // } else{
+  //   echo "insert failed";
+  }
+// }
+
 // Free resultset
 pg_free_result($result4);
 
@@ -63,15 +90,17 @@ pg_free_result($result4);
 pg_close($dbconn);
 ?>
 <div class="newrole">
-        <input type="text" class="role" placeholder="New Role"/>
+  <form method="POST">
+        <input type="text" class="role" placeholder="New Role" name="newrole"/>
         <br>
-        <input type="text" class="accesslvl" placeholder="Access Level"/>
+        <input type="text" class="accesslvl" placeholder="Access Level" name="accesslvl"/>
         <br>
 </div>
 <div class="newrole">
-        <button class="Btn-Style-1">OK</button>
+        <input class="Btn-Style-1" type="submit" name="insert" value="Insert"></input>
         <br>
-        <button class="Btn-Style-1">Cancel</button>
+        <input class="Btn-Style-1" type="submit" name="delete" value="Delete"></input>
+        </form>
     </div>
 </body>
 </html>

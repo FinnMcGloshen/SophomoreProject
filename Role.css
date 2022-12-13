@@ -248,7 +248,6 @@ select {
 .model-confirm-btn {
   background-color: tomato;
   font-family: "Source Serif Pro", serif;
-<<<<<<< HEAD
   border: none;
   cursor: pointer;
 }
@@ -295,16 +294,7 @@ select {
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
 }
-=======
-border: none;
-cursor: pointer;
-}
 .newrole{
   display: flex;
   justify-content: space-evenly;
 }
-.Btn-Fix {
-  margin-left: 2vw;
-  margin-top: 0.5vh;
-}
->>>>>>> d95359f8d146b9f579cc4e00b7fe05bdb6bbb91c

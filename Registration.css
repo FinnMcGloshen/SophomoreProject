@@ -1,7 +1,14 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Serif Pro", serif;
+}
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90vh;
 }
 body {
   margin: 0;
@@ -16,13 +23,49 @@ body {
   color: #555;
   background-color: #ecf0f3;
 }
-.sign-in-div {
-  width: 700px;
-  height: 900px;
+#input-fields {
+    width: 3%;
+
+}
+#input-fields select {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    font-family: "Source Serif Pro", serif;
+}
+.New-Roster-Div {
+  width: 1150px;
+  height: 875px;
   padding: 60px 35px 35px 35px;
   border-radius: 40px;
   background-color: #ecf0f3;
   box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+  display: none;
+}
+.New-Roster-Div-2 {
+  width: 1150px;
+  height: 670px;
+  padding: 60px 35px 35px 35px;
+  border-radius: 40px;
+  background-color: #ecf0f3;
+  display: none;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.input-fields {
+  width: 50%;
+  padding: 75px 5px 5px 5px;
+}
+.input-fields input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #555;
+  padding: 20px 10px 20px 5px;
+  font-family: "Source Serif Pro", serif;
 }
 .input-fields select {
   border: none;
@@ -33,61 +76,148 @@ body {
   padding: 20px 10px 20px 5px;
   font-family: "Source Serif Pro", serif;
 }
-.input-fields-1 {
-  width: 100%;
-  padding: 35px 5px 5px 5px;
+.username,
+.password {
+  margin-left: 30px;
+  padding-left: 15px;
+  text-align: center;
+  width: 300px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+.input-fields svg {
+  height: 22px;
+  margin: 0 10px -3px 25px;
+}
+.Patient-btn1 {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  height: 60px;
+  font-family: "Source Serif Pro", serif;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background-color: #02c8db;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+  transition: all 0.5s;
+}
+.Patient-btn2 {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  height: 60px;
+  font-family: "Source Serif Pro", serif;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background-color: hsl(9, 98%, 43%);
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+  transition: all 0.5s;
+}
+.Patient-btn1:hover {
+  background-color: #50e5b9;
+}
+.Patient-btn2:hover {
+  background-color: #50e5b9;
+}
+.Patient-btn1:active {
+  background-color: #6ec581;
+}
+.Patient-btn2:active {
+  background-color: #6ec581;
+}
+.title {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 24px;
+  letter-spacing: 0.5px;
+}
+.Patient-Btn-Style {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  align-items: flex-start;
 }
-.input-fields-1 input {
-  border: none;
-  outline: none;
-  background: none;
-  font-family: "Source Serif Pro", serif;
-  font-size: 18px;
-  color: #555;
-  margin-left: 20px;
-  padding: 20px 35px 20px 5px;
+.Item-Info {
+  text-align: center;
 }
-.first-name,
-.last-name {
-  margin-bottom: 30px;
-  border-radius: 25px;
-  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+input[type="date"] {
+  display: flex;
+  flex-flow: row-reverse;
+  margin-left: 55px;
 }
-.input-fields-2 {
-  width: 100%;
-  padding: 15px 10px 10px 10px;
+input[type="first-name"] {
+  display: flex;
+  flex-flow: row-reverse;
+  text-align: center;
+  margin-left: 15px;
 }
-.input-fields-2 input {
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 18px;
-  color: #555;
-  margin-left: 35px;
-  padding: 20px 35px 20px 5px;
-  font-family: "Source Serif Pro", serif;
+input[type="last-name"] {
+  display: flex;
+  flex-flow: row-reverse;
+  text-align: center;
+  margin-left: 15px;
 }
-.input-fields-2 select {
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 18px;
-  color: #555;
-  margin-left: 35px;
-  padding: 20px 35px 20px 5px;
-  font-family: "Source Serif Pro", serif;
+input[type="text"] {
+  display: flex;
+  flex-flow: row-reverse;
+  text-align: center;
+  margin-left: 15px;
 }
-.email,
-.phone,
-.password,
-.dob,
-.roles {
-  margin-bottom: 30px;
-  border-radius: 25px;
-  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+input[type="email"] {
+  display: flex;
+  flex-flow: row-reverse;
+  text-align: center;
+  margin-left: 15px;
+}
+input[type="number"] {
+  display: flex;
+  flex-flow: row-reverse;
+  text-align: center;
+  margin-left: 15px;
+}
+input[type="tel"] {
+  display: flex;
+  flex-flow: row-reverse;
+  text-align: center;
+  margin-left: 15px;
+}
+input[type="password"] {
+  display: flex;
+  flex-flow: row-reverse;
+  text-align: center;
+  margin-left: 15px;
+}
+input::-webkit-datetime-edit-fields-wrapper {
+  position: relative;
+  left: 15px;
+}
+.New-Roster-Section-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Section-1-Style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-left: 15px;
+}
+.New-Roster-Section-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 27vw;
+  align-items: center;
+  
 }
 .signin-btn {
   outline: none;
@@ -111,11 +241,11 @@ body {
 .signin-btn:active {
   background-color: #88ef9e;
 }
-.title {
+.Section-2-Style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  font-size: 28px;
-  padding-top: 24px;
-  letter-spacing: 0.5px;
 }
 .link {
   padding-top: 30px;
@@ -127,36 +257,13 @@ body {
   color: #aaa;
   font-size: 18px;
 }
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f7f9fb;
-  transition: opacity 0.75s, visibility 0.75s;
+.link-2 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 18px;
 }
-.loader-hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-.loader::after {
-  content: "";
-  width: 75px;
-  height: 75px;
-  border: 15px solid #dddddd;
-  border-top-color: #7449f5;
-  border-radius: 50%;
-  animation: loading 0.75s ease infinite;
-}
-@keyframes loading {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
+.link-2 a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 18px;
 }

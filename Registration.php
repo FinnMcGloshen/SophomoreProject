@@ -89,79 +89,250 @@ $fields = array('fname','lname','email','role','phone','password','dob');
 pg_close($dbconn);
 ?>
   <body>
-    <div class="sign-in-div">
-      <div class="title">Create an Account</div>
-      <br>
+  <div class="choices" id="input-fields">
+      <select name="role" id="Role-Type" onchange="toggleDiv(this.value)">
+        <option value="">Select an Option:</option>
+        <option value="2">Admin</option>
+        <option value="2">Supervisor</option>
+        <option value="2">Caregiver</option>
+        <option value="2">Doctor</option>
+        <option value="2">Family Member</option>
+        <option value="1">Patient</option>
+      </select>
+    </div>
+    <div class="New-Roster-Div" id="Form-1">
+      <h2><center>Create an Account:</center></h2>
       <form action="" method="POST">
-      <div class="input-fields-1">
-        <div class="first-name">
-          <input
-            type="first-name"
-            class="firstname-input"
-            placeholder="First Name"
-            name="fname"
-          />
+      <div class="input-fields">
+        <div class="New-Roster-Section-1">
+          <div class="Section-1-Style">
+            <h3>First Name:</h3>
+            <br />
+            <div class="username">
+              <input
+                type="first-name"
+                class="firstname-input"
+                placeholder="First Name"
+                name="fname"
+                required
+              />
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Last Name:</h3>
+            <br />
+            <div class="username">
+              <input
+                type="last-name"
+                class="lastname-input"
+                placeholder="Last Name"
+                name="lname"
+                required
+              />
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Email ID:</h3>
+            <br />
+            <div class="username">
+              <input
+                type="email"
+                class="user-input"
+                placeholder="Email Address"
+                name="email"
+                required
+              />
+            </div>
+          </div>
         </div>
-        <div class="last-name">
-          <input
-            type="last-name"
-            class="lastname-input"
-            placeholder="Last Name"
-            name="lname"
-          />
+        <div class="New-Roster-Section-1">
+          <div class="Section-1-Style">
+            <h3>Phone #:</h3>
+            <br />
+            <div class="username">
+              <input
+                type="tel"
+                placeholder="Phone #"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+                name="phone"
+              />
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Password:</h3>
+            <br />
+            <div class="username">
+              <input
+                type="password"
+                class="pass-input"
+                placeholder="Password"
+                name="password"
+                required
+              />
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Date of Birth:</h3>
+            <br />
+            <div class="username">
+              <input
+                type="date"
+                class="user-input"
+                placeholder="Date Of Birth"
+                name="dob"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="New-Roster-Section-1">
+          <div class="Section-1-Style">
+            <h3>Family Code:</h3>
+            <br />
+            <div class="username">
+              <input type="number" name="familyCode" placeholder="Ex: 12345" />
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>EM Contact:</h3>
+            <br />
+            <div class="username">
+              <input
+                type="text"
+                placeholder="Emergency Contact"
+                name="emergencyContact"
+              />
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Relation to Emergency Contact:</h3>
+            <br />
+            <div class="username">
+              <select name="Roles" id="Roles-9" class="Doctor-Selection">
+                <option value="" class="Family">Select a choice</option>
+                <option value="" class="Family">Father</option>
+                <option value="" class="Family">Mother</option>
+                <option value="" class="Family">Brother</option>
+                <option value="" class="Family">Sister</option>
+                <option value="" class="Family">Aunt</option>
+                <option value="" class="Family">Uncle</option>
+                <option value="" class="Family">Grandmother</option>
+                <option value="" class="Family">Grandfather</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="New-Roster-Section-2">
+          <div class="Section-2-Style">
+            <h3>Date:</h3>
+            <br />
+            <div class="username">
+              <input type="date" name="admissionDate" />
+            </div>
+          </div>
         </div>
       </div>
-      <div class="input-fields-2">
-        <div class="email">
-          <input type="email" class="user-input" placeholder="Email Address" name="email" />
-        </div>
-        <div class="roles">
-          <select name="role" id="Role-Type">
-            <option value="">Select a role</option>
-            <option value="Admin">Admin</option>
-            <option value="Supervisor">Supervisor</option>
-            <option value="Caregiver">Caregiver</option>
-            <option value="Doctor">Doctor</option>
-            <option value="Patient">Patient</option>
-            <option value="Family Member">Family Member</option>
-          </select>
-        </div>
-        <div class="phone">
-          <input
-            type="tel"
-            placeholder="Phone #"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            required
-            name="phone"
-          />
-        </div>
-        <div class="password">
-          <input type="password" class="pass-input" placeholder="Password" name="password"/>
-        </div>
-        <div class="dob">
-          <input type="date" class="user-input" placeholder="Date Of Birth" name="dob"/>
-        </div>
-        <div class="additionalInfo" id="additionalInfo">
-          <div class="familyCode">
-            Family Code<input type="number" placeholder="Family Code" name="familyCode">
+      <br />
+      <div class="link-2">
+        Already have an account? <a href="Login.php">Sign-In Here!</a>
+      </div>
+      <br />
+      <center><input class="signin-btn" type="submit" value="submit" name="signup" ></input></center>
+    </form>
+    </div>
+    <br />
+    <div class="New-Roster-Div-2" id="Form-2">
+      <h2><center>Create an Account:</center></h2>
+      <form action="" method="POST">
+      <div class="input-fields">
+        <div class="New-Roster-Section-1">
+          <div class="Section-1-Style">
+            <h3>First Name:</h3>
+            <br />
+            <div class="username">
+              <input  type="first-name"
+              class="firstname-input"
+              placeholder="First Name"
+              name="fname"
+              required />
+            </div>
           </div>
-          <div class="emergencyContact">
-            EM Contact<input type="text" placeholder="Emergency Contact" name="emergencyContact">
+          <div class="Section-1-Style">
+            <h3>Last Name:</h3>
+            <br />
+            <div class="username">
+              <input type="last-name"
+              class="lastname-input"
+              placeholder="Last Name"
+              name="lname"
+              required />
+            </div>
           </div>
-          <div class="relation">
-            Relation<input type="text" placeholder="Relation to Contact" name="relation">
+          <div class="Section-1-Style">
+            <h3>Email ID:</h3>
+            <br />
+            <div class="username">
+              <input
+              type="email"
+              class="user-input"
+              placeholder="Email Address"
+              name="email"
+              required
+              />
+            </div>
           </div>
-          <div class="admissionDate">
-            Admission Date<input type="date" name="admissionDate">
+        </div>
+        <br />
+        <div class="New-Roster-Section-1">
+          <div class="Section-1-Style">
+            <h3>Phone #:</h3>
+            <br />
+            <div class="username">
+              <input
+              type="tel"
+              placeholder="Phone #"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+              name="phone"
+              />
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Password:</h3>
+            <br />
+            <div class="username">
+              <input
+              type="password"
+              class="pass-input"
+              placeholder="Password"
+              name="password"
+              required
+              />
+            </div>
+          </div>
+          <div class="Section-1-Style">
+            <h3>Date of Birth:</h3>
+            <br />
+            <div class="username">
+              <input  type="date"
+              class="user-input"
+              placeholder="Date Of Birth"
+              name="dob"
+              required />
+            </div>
           </div>
         </div>
       </div>
-      <center><input class="signin-btn" type="submit" value="submit" name="signup" >Sign Up</input></center>
-      </form>
-
+      <br />
       <div class="link">
         Already have an account? <a href="Login.php">Sign-In Here!</a>
       </div>
+      <br />
+      <center><input class="signin-btn" type="submit" value="submit" name="signup" ></input></center>
+      </form>
+      <br>
+      <br>
     </div>
     <script>
       var patientDiv = document.getElementById('additionalInfo');

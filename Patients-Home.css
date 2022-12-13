@@ -14,6 +14,8 @@ body {
 .Welcome-Greeting-1 {
   text-align: center;
   margin-top: 15vh;
+  display: flex;
+  justify-content: space-evenly;
 }
 .Main-Table {
   position: absolute;
@@ -58,4 +60,8 @@ input {
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #cbced1;
   border-radius: 12px;
   font-size: larger;
+}
+.box{
+  box-shadow: none;
+  width: 100px;
 }

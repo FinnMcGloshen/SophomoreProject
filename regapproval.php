@@ -1,31 +1,188 @@
-<html>
-    <head>
-        <title>
-            Registration Approval
-        </title>
-        <style>
-        table,th,td{
-            border:1px solid black
-        }
-    </style>
-    </head>
-    <body>
-        <header>Registration Approval</header>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-            </tr>
-        </table>
-        <br>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Reg-Approval.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Registration Approval</title>
+  </head>
+  <body>
+    <button class="redirect-home">
+      <a href="Admin-Report.html"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-90deg-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"
+          />
+        </svg>
+        Go Back</a
+      >
+    </button>
+    <h2 class="Welcome-Greeting-1">
+      Millstream Village Registration Approval:
+    </h2>
+    <br />
+    <div class="Main-Table">
+      <table>
+        <tbody>
+          <tr class="table-title">
+            <th class="table-data">Name:</th>
+            <th class="table-data">Role:</th>
+          </tr>
+          <?php
+$dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
+or die('Could not connect: ' . pg_last_error());
+$query1 = "SELECT fname, role FROM accounts;";
+$result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
 
-        <div>
-        <button>Yes</button>
-        <button>No</button>
-        </div>
-        <div>
-            <button>OK</button>
-            <button>Cancel</button>
-        </div>
-    </body>
+while ($line = pg_fetch_array($result1, null, PGSQL_ASSOC)) {
+    echo "\t<tr class='table-title'>\n";
+    foreach ($line as $col_value) {
+        echo "\t\t<td class='table-data'>$col_value</td>\n";
+    }
+    echo "\t</tr>\n";
+}
+echo "</table>\n";
+    ?>
+        </tbody>
+      </table>
+    </div>
+      <div class="popup" id="popup">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="green" class="bi bi-check-circle-fill" id="svg-style"  viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>
+            <h2>Thank You!</h2>
+            <p>Registration Approvals have been successfully updated!</p>
+            <button type="button" onclick="closePopUp()">Okay</button>
+      </div>
+    <div id="confirmation" class="model-container">
+      <div class="model">
+        <section>
+          <header class="model-header">
+            <span onclick="onCancel()"></span>
+            <h2>Are you sure you want to confirm?</h2>
+          </header>
+          <section class="model-content">
+            <p>This action cannot be undone!</p>
+          </section>
+          <footer class="model-footer">
+            <button class="model-btn" onclick="onCancel()">Cancel</button>
+            <button class="model-btn model-confirm-btn" onclick="openPopUp(), onConfirm()">
+              Confirm
+            </button>
+          </footer>
+        </section>
+      </div>
+    </div>
+    <div class="Title-Fix">
+      <h2 class="Title-2">Approve Registrations?</h2>
+    </div>
+    <div class="Check-Box-Tidy-Up">
+      <div class="Patient-Search-Style-1">
+        <h2 class="Search-Title">Yes</h2>
+        <br />
+        <input
+          type="checkbox"
+          id="FirstCheckBox"
+          class="CheckBox-1"
+          onchange="disableCheckbox2()"
+        />
+      </div>
+      <div class="Patient-Search-Style-2">
+        <h2 class="Search-Title">No</h2>
+        <br />
+        <input
+          type="checkbox"
+          id="SecondCheckBox"
+          class="CheckBox-2"
+          onchange="disableCheckBox1()"
+        />
+      </div>
+    </div>
+    <div class="Family-Btn-Tidy-Up">
+      <button class="Btn-Style-1" onclick="onDelete()">Okay</button>
+      <button class="Btn-Style-2" >Cancel</button>
+    </div>
+    <div class="loader"></div>
+    
+    <script>
+       let popup = document.getElementById("popup");
+
+function openPopUp() {
+    popup.classList.add("open-popup");
+}
+function closePopUp() {
+    popup.classList.remove("open-popup");
+}
+      function disableCheckbox2() {
+        var theLists = document.getElementsByClassName("CheckBox-2");
+
+        if (document.getElementById("FirstCheckBox").checked) {
+          for (let i = 0; i < theLists.length; i++) {
+            theLists[i].disabled = true;
+          }
+        } else {
+          for (let i = 0; i < theLists.length; i++) {
+            theLists[i].disabled = false;
+          }
+        }
+      }
+      function disableCheckBox1() {
+        var theLists = document.getElementsByClassName("CheckBox-1");
+
+        if (document.getElementById("SecondCheckBox").checked) {
+          for (let i = 0; i < theLists.length; i++) {
+            theLists[i].disabled = true;
+          }
+        } else {
+          for (let i = 0; i < theLists.length; i++) {
+            theLists[i].disabled = false;
+          }
+        }
+      }
+
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("loader-hidden");
+
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild("loader");
+        });
+      });
+      function onCancel() {
+        let confirmation = document.getElementById("confirmation");
+        confirmation.classList.remove("model-open");
+      }
+      function onConfirm() {
+        onCancel();
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("confirmation")
+          .addEventListener("click", onCancel);
+        document
+          .querySelector(".model")
+          .addEventListener("click", (e) => e.stopPropagation());
+      });
+      function onDelete() {
+        let confirmation = document.getElementById("confirmation");
+        if (!confirmation.classList.contains("model-open")) {
+          confirmation.classList.add("model-open");
+        }
+      }
+    </script>
+  </body>
 </html>

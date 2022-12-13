@@ -8,15 +8,22 @@
     <title>Patient's Home</title>
   </head>
   <body>
+    <div class="Btn-Fix">
+      <button onclick="history.go(-1);" class="Redirect-Home"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+      </svg>Go Back</a></button>
+    </div>
     <div class="patientshome">
+      <div class="Welcome-Greeting-1">
       <header>Patient's Home</header>
       <input type="text" class="patientid" placeholder="Patient ID" />
-      <br />
+      <br/>
       <input type="text" class="patientname" placeholder="Patient Name" />
-      <br />
+      <br/>
       <input type="text" class="date" placeholder="Date" />
-      <br />
-      <table>
+      <br/>
+      </div>
+      <table class="Main-Table">
         <tbody>
           <tr class="table-title">
             <th class="table-data">Doctor's Name</th>
@@ -30,17 +37,17 @@
             <th class="table-data">Dinner</th>
           </tr>
           <tr class="table-title">
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
-            <td class="table-data">test</td>
+            <td class="table-data">Christine Philips</td>
+            <td class="table-data"><input id="1" type="checkbox" class="box"></td>
+            <td class="table-data">Steve Johnson</td>
+            <td class="table-data"><input id="2" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="3" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="4" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="5" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="6" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="7" type="checkbox" class="box"></td>
           </tr>
-          <tr class="table-title">
+          <!-- <tr class="table-title">
             <td class="table-data">test</td>
             <td class="table-data">test</td>
             <td class="table-data">test</td>
@@ -83,7 +90,7 @@
             <td>x</td>
             <td>x</td>
             <td>x</td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>
@@ -101,6 +108,7 @@
         <input type="number" placeholder="Ex: 12345" />
       </div>
     </div>
+    <button class="Btn-Style-1" onclick="save()">Save</button>
   </body>
   <script>
     n = new Date();
@@ -110,22 +118,24 @@
     document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 
     let boxes = document.getElementsByClassName("box").length;
-    function save() {
+      function save() {
+        for (let i = 1; i <= boxes; i++) {
+          var checkbox = document.getElementById(String(i));
+          localStorage.setItem("phcheckbox" + String(i), checkbox.checked);
+        }
+      }
+      //for loading
       for (let i = 1; i <= boxes; i++) {
-        var checkbox = document.getElementById(String(i));
-        localStorage.setItem("checkbox" + String(i), checkbox.checked);
+        if (localStorage.length > 0) {
+          var checked = JSON.parse(
+            localStorage.getItem("phcheckbox" + String(i))
+          );
+          document.getElementById(String(i)).checked = checked;
+        }
       }
-    }
-    //for loading
-    for (let i = 1; i <= boxes; i++) {
-      if (localStorage.length > 0) {
-        var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
-        document.getElementById(String(i)).checked = checked;
+      window.addEventListener("change", save);
+      function clear() {
+        localStorage.clear();
       }
-    }
-    window.addEventListener("change", save);
-    function clear() {
-      localStorage.clear();
-    }
   </script>
 </html>

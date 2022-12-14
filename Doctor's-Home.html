@@ -137,15 +137,17 @@
         
       </div>
       <div class="patient-btns">
-        <button onclick="window.location.href='Patient-Of-Doctor.html'" class="patient-btn">Patient 1</button>
+        
+        <button onclick="f1()" class="patient-btn" id="p1">Patient 1</button>
         <br>
-        <button onclick="window.location.href='Patient-Of-Doctor.html'" class="patient-btn">Patient 2</button>
+        <button onclick="f1()" class="patient-btn" id="p2">Patient 2</button>
         <br>
-        <button onclick="window.location.href='Patient-Of-Doctor.html'" class="patient-btn">Patient 3</button>
+        <button onclick="f1()" class="patient-btn" id="p3">Patient 3</button>
         <br>
-        <button onclick="window.location.href='Patient-Of-Doctor.html'" class="patient-btn">Patient 4</button>
+        <button onclick="f1()" class="patient-btn" id="p4">Patient 4</button>
         <br>
-        <button onclick="window.location.href='Patient-Of-Doctor.html'" class="patient-btn" >Patient 5</button>
+        <button onclick="f1()" class="patient-btn" id="p5">Patient 5</button>
+        
         <br>
       </div>
       <br />
@@ -202,7 +204,7 @@
         document.getElementById("29").value = getSavedValue("29");
         document.getElementById("35").value = getSavedValue("35");
         document.getElementById("36").value = getSavedValue("36");
-        document.getElementById("2").value = getSavedValue("2");    // set the value to this input
+        document.getElementById("2").value = getSavedValue("2");    
         document.getElementById("9").value = getSavedValue("9");
         document.getElementById("16").value = getSavedValue("16");
         document.getElementById("23").value = getSavedValue("23");
@@ -222,6 +224,31 @@
                 return "";// You can change this to your defualt value. 
             }
             return localStorage.getItem(v);
+        }
+        
+        function f1(){
+          var id = event.srcElement.id
+          if(id=='p1'){
+            localStorage.setItem('p1','Micheal Jenkins')
+            location.href = "Patient-Of-Doctor.html"
+          }
+          if(id=='p2'){
+            localStorage.setItem('p1','William Johnson')
+            location.href = "Patient-Of-Doctor.html"
+
+          }
+          if(id=='p3'){
+            localStorage.setItem('p1','Robert Peterson')
+            location.href = "Patient-Of-Doctor.html"
+          }
+          if(id=='p4'){
+            localStorage.setItem('p1','Cheryl Adams')
+            location.href = "Patient-Of-Doctor.html"
+          }
+          if(id=='p5'){
+            localStorage.setItem('p1','Barbara Davis')
+            location.href = "Patient-Of-Doctor.html"
+          }
         }
     </script>
 </body>

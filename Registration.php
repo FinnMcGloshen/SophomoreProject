@@ -34,7 +34,7 @@ $fields = array('fname','lname','email','role','phone','password','dob');
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $email = $_POST['email'];
-    $role = $_POST['role1'];
+    $role = $_POST['role'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
     $dob = $_POST['dob'];
@@ -91,7 +91,7 @@ pg_close($dbconn);
   <body>
   <div class="choices" id="input-fields">
   <form action="" method="POST">
-      <select name="role1" id="Role-Type" onchange="toggleDiv(this.value)">
+      <select name="role" id="Role-Type" onchange="toggleDiv(this.value)">
         <option value=""> Select an Option:</option>
         <option value="Admin">Admin</option>
         <option value="Supervisor">Supervisor</option>
@@ -246,6 +246,15 @@ pg_close($dbconn);
     <div class="New-Roster-Div-2" id="Form-2">
       <h2><center>Create an Account:</center></h2>
       <form action="" method="POST">
+      <select name="role" id="Role-Type" onchange="toggleDiv(this.value)">
+        <option value=""> Select an Option:</option>
+        <option value="Admin">Admin</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Caregiver">Caregiver</option>
+        <option value="Doctor">Doctor</option>
+        <option value="Family Member">Family Member</option>
+        <option value="Patient">Patient</option>
+      </select>
       <div class="input-fields">
         <div class="New-Roster-Section-1">
           <div class="Section-1-Style">

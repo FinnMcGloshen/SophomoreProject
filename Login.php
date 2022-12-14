@@ -12,7 +12,7 @@
     <title>Login</title>
     <?php
 // Connecting, selecting database
-$dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
+$dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
     or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query
@@ -35,26 +35,29 @@ if(isset($_POST['submit'])&&!empty($_POST['submit'])){
   $login_check = pg_num_rows($data);
   if($login_check > 0){ 
     
-    echo "Login Successfully";    
+    // echo "Login Successfully";    
     // $query1 ="select role from accounts where email = '".pg_escape_string($_POST['email'])."' and password ='".$password."'";
     // $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
     // $query = "SELECT * FROM accounts WHERE email='$email' AND password ='$password'";
     $sql = "SELECT * FROM accounts WHERE email='$email' AND password ='$password'";
     $result = pg_query($dbconn, $sql);
     $row = pg_fetch_assoc($result);
-    if($row["role"]==6 or $row["role"]==5){
+    if($row["role"]=='Admin'){
+      header('location: Admin-Report.html');
+    }
+    if($row["role"]=='Supervisor'){
       header('location: roster.php');
     }
-    elseif($row["role"]==4){
+    if($row["role"]=='Caregiver'){
       header("location: Caregiver's-Home.php");
     }
-    elseif($row["role"]==3){
+    if($row["role"]=='Doctor'){
       header("location: Doctor's-Home.html");
     }
-    elseif($row["role"]==2){
-      header('location: Patient-Additional_Info.html');
+    if($row["role"]=='Patient'){
+      header('location: Patient-Additional_Info.php');
     }
-    else{
+    if($row["role"]=='Family Member'){
       header("location: Family-Member-Home.html");
     }
 }else{
@@ -102,7 +105,7 @@ pg_close($dbconn);
           <input type="password" class="pass-input" placeholder="Password" name="password"/>
         </div>
       </div>
-      <center><input class="signin-btn" name="submit" type="submit" value="submit">Sign In</center>
+      <center><input class="signin-btn" name="submit" type="submit" value="submit"></center>
       </form>
       <br>
       <div class="link">

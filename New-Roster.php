@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="New-Roster.css" /> -->
+    <link rel="stylesheet" href="New-Roster.css" />
     <title>New Roster</title>
     <?php
       if ($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -24,7 +24,7 @@
         $cg2_group = $_POST['cg2_group'];
         $cg3_group = $_POST['cg3_group'];
         $cg4_group = $_POST['cg4_group'];
-        $dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
+        $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
           or die('Could not connect: ' . pg_last_error());
         $data_insert = pg_query($dbconn, "INSERT into roster (roster_date, supervisor, doctor, cg1, cg2, cg3, cg4, cg1_group, cg2_group, cg3_group, cg4_group)
         VALUES ('$roster_date', '$supervisor', '$doctor', '$cg1', '$cg2', '$cg3', '$cg4', '$cg1_group', '$cg2_group', '$cg3_group', '$cg4_group');");
@@ -114,13 +114,13 @@
                   <option value="Julian O." class="Doctor-Choices">Julian O.</option>
                   <option value="Amy A." class="Doctor-Choices">Amy A.</option>
                 </select>
-              </div>
               <select name="cg1_group">
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
                 <option value="D">D</option>
             </select>
+            </div>
             </div>
           </div>
           <br />

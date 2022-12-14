@@ -1,6 +1,6 @@
 <?php
         $myObj = array();
-        $dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
+        $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
         or die('Could not connect: ' . pg_last_error());
         $result = pg_query($dbconn, "SELECT id, fname, lname, admission_date FROM accounts WHERE role = 'Patient';");
         $doctorSearch = pg_query($dbconn, "SELECT fname, lname FROM accounts WHERE role = 'Doctor';");

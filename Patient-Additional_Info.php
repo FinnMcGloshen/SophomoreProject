@@ -9,7 +9,7 @@
       // initialize variables
       $group = $_POST['group'];
       $id = intval($_POST['id']);
-      $dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
+      $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
         or die('Could not connect: ' . pg_last_error());
       $result = pg_query($dbconn, "UPDATE accounts SET group_letter = '$group' WHERE id = $id;");
       pg_close($dbconn);

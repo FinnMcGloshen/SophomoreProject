@@ -29,9 +29,7 @@
         <input type="text" class="textinput" id="topinput2" />
       </div>
     </div>
-
     <br />
-
     <div class="Main-Table">
       <table id="main-table">
         <tbody>
@@ -77,207 +75,21 @@ while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
     }
     echo "\t</tr>\n";
 }
-echo "</table>\n";
+// echo "</table>\n";
     pg_close($dbconn);
   }?>
-          <!-- <tr class="table-title">
-            <td class="table-data"><input id="1" type="date" class="date" onchange='saveValue(this)'></td>
-            <td class="table-data"><input id="2" type="text" class="appts" onkeyup='saveValue(this)'></td>
-            <td class="table-data"><input id="3" type="text" class="appts" onkeyup='saveValue(this)'></td>
-            <td class="table-data"><input id="4" type="text" class="appts" onkeyup='saveValue(this)'></td>
-            <td class="table-data"><input id="5" type="text" class="appts" onkeyup='saveValue(this)'></td>
-          <tr class="table-title">
-            <td class="table-data">
-              <input
-                id="1"
-                type="date"
-                class="date"
-                onchange="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="2"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="3"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="4"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="5"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-          </tr>
-          <tr class="table-title">
-            <td class="table-data">
-              <input
-                id="6"
-                type="date"
-                class="date"
-                onchange="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="7"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="8"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="9"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="10"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-          </tr>
-          <tr class="table-title">
-            <td class="table-data">
-              <input
-                id="11"
-                type="date"
-                class="date"
-                onchange="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="12"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="13"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="14"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="15"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-          </tr>
-          <tr class="table-title">
-            <td class="table-data">
-              <input
-                id="16"
-                type="date"
-                class="date"
-                onchange="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="17"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="18"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="19"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="20"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-          </tr>
-          <tr class="table-title">
-            <td class="table-data"><input id="21" type="date" class="date" onchange='saveValue(this)'></td>
-            <td class="table-data"><input id="22" type="text" class="appts" onkeyup='saveValue(this)'></td>
-            <td class="table-data"><input id="23" type="text" class="appts" onkeyup='saveValue(this)'></td>
-            <td class="table-data"><input id="24" type="text" class="appts" onkeyup='saveValue(this)'></td>
-            <td class="table-data"><input id="25" type="text" class="appts" onkeyup='saveValue(this)'></td>
-          </tr> -->
+         
         </tbody>
       </table>
     </div>
     <div class="Welcome-Greeting-2"><h2>Add a New Prescription:</h2></div>
     <div class="POD-Input-Organise">
-      <div class="POD-Input-Style">
-        <h2>Morning Medicine:</h2>
-        <input type="text" class="textinput" id="new1" />
-      </div>
-      <div class="Welcome-Greeting-2"><h2>Add a New Prescription:</h2></div>
-      <div class="POD-Input-Organise">
-        <div class="POD-Input-Style">
         <form method="POST" name="insertp">
         <div class="POD-Input-Style">
           <h2>Patient Name:</h2>
           <input type="text" class="textinput" id="patientname" name="pname">
         </div>
+        <div class="POD-Input-Style">
           <h2>Morning Medicine:</h2>
           <input type="text" class="textinput" id="new1" name="mmed">
         </div>
@@ -294,16 +106,8 @@ echo "</table>\n";
           <input type="text" class="textinput" id="new4" name="comm">
         </div>
       </div>
-      <div class="POD-Input-Style">
-        <h2>Evening Medicine:</h2>
-        <input type="text" class="textinput" id="new3" />
-      </div>
-      <div class="POD-Input-Style">
-        <h2>Doctor's Comments:</h2>
-        <input type="text" class="textinput" id="new4" />
-      </div>
     </div>
-    <div class="popup" id="popup">
+    <!-- <div class="popup" id="popup">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100"
@@ -317,11 +121,11 @@ echo "</table>\n";
           d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
         />
       </svg>
-      <h2>Thank You!</h2>
-      <p>A New Perscription has been successfully added!</p>
+      <h2 class="popup">Thank You!</h2>
+      <p class="popup">A New Perscription has been successfully added!</p>
       <button type="button" onclick="closePopUp()">Okay</button>
-    </div>
-    <div id="confirmation" class="model-container">
+    </div> -->
+    <!-- <div id="confirmation" class="model-container">
       <div class="model">
         <section>
           <header class="model-header">
@@ -331,14 +135,14 @@ echo "</table>\n";
           <section class="model-content">
             <p>This action cannot be undone!</p>
           </section>
-          <footer class="model-footer">
-            <button class="model-btn" onclick="onCancel()">Cancel</button>
+          <footer class="model-footer"> -->
+            <!-- <button class="model-btn" onclick="onCancel()">Cancel</button>
             <button
               class="model-btn model-confirm-btn"
               onclick="openPopUp(), onConfirm(), newrow()"
             >
               Confirm
-            </button>
+            </button> -->
           </footer>
         </section>
       </div>

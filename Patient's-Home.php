@@ -61,41 +61,46 @@
     <table class="Main-Table">
       <tbody>
         <tr class="table-title">
-          <th class="table-data">Doctor's Name</th>
-          <th class="table-data">Doctor's Appointment</th>
-          <th class="table-data">Caregiver's Name</th>
+          <th class="table-data">Name</th>
           <th class="table-data">Morning Medicine</th>
           <th class="table-data">Afternoon Medicine</th>
-          <th class="table-data">Night Medicine</th>
+          <th class="table-data">Evening Medicine</th>
+          <th class="table-data">Doctor's Comments</th>
+          <!-- <th class="table-data">Night Medicine</th>
           <th class="table-data">Breakfast</th>
           <th class="table-data">Lunch</th>
-          <th class="table-data">Dinner</th>
+          <th class="table-data">Dinner</th> -->
         </tr>
-        <tr class="table-title">
-          <td class="table-data">Christine Philips</td>
-          <td class="table-data">
-            <input id="1" type="checkbox" class="box" />
-          </td>
-          <td class="table-data">Steve Johnson</td>
-          <td class="table-data">
-            <input id="2" type="checkbox" class="box" />
-          </td>
-          <td class="table-data">
-            <input id="3" type="checkbox" class="box" />
-          </td>
-          <td class="table-data">
-            <input id="4" type="checkbox" class="box" />
-          </td>
-          <td class="table-data">
-            <input id="5" type="checkbox" class="box" />
-          </td>
-          <td class="table-data">
-            <input id="6" type="checkbox" class="box" />
-          </td>
-          <td class="table-data">
-            <input id="7" type="checkbox" class="box" />
-          </td>
-        </tr>
+        <?php 
+  $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
+  or die('Could not connect: ' . pg_last_error());
+
+    // $fields = implode (" , ", $fields);
+    // $query1 = 'DROP TABLE IF EXISTS accounts;';
+    // $query2 = 'CREATE TABLE prescriptions (pname text, mmed text, amed text, emed text, comm text);';
+    // $query3 = "INSERT INTO prescriptions(pname,mmed,amed,emed,comm)
+    // VALUES ('$pname','$mmed','$amed','$emed','$comm');";
+    $query4 = "SELECT * FROM prescriptions;";
+    // $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
+    // $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
+    $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error()); 
+    // if($role == 'Patient'){
+    //   $result3 = pg_query($additionalQuery) or die('Query failed: ' . pg_last_error());
+    // } else {
+    //   $result = pg_query($query3) or die('Query failed: ' . pg_last_error());
+    // }
+    // echo 'Account created!';
+    // header('location: Login.php');
+while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
+    echo "\t<tr class='table-title'>\n";
+    foreach ($line as $col_value) {
+        echo "\t\t<td class='table-data'>$col_value</td>\n";
+    }
+    echo "\t</tr>\n";
+}
+// echo "</table>\n";
+    pg_close($dbconn);
+  ?>
       </tbody>
     </table>
     <div class="Patient-Search-Functions-Tidy-Up">

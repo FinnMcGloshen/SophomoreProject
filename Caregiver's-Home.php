@@ -111,11 +111,28 @@
             <th class="table-data">Morning Medicine</th>
             <th class="table-data">Afternoon Medicine</th>
             <th class="table-data">Night Medicine</th>
-            <th class="table-data">Breakfast</th>
-            <th class="table-data">Lunch</th>
-            <th class="table-data">Dinner</th>
+            <th class="table-data">Doctor's Comments</th>
+            <!-- <th class="table-data">Lunch</th>
+            <th class="table-data">Dinner</th> -->
           </tr>
-          <tr class="table-title">
+          <?php 
+  $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
+  or die('Could not connect: ' . pg_last_error());
+    $query4 = "SELECT * FROM prescriptions;";
+    
+    $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error()); 
+    
+while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
+    echo "\t<tr class='table-title'>\n";
+    foreach ($line as $col_value) {
+        echo "\t\t<td class='table-data'>$col_value</td>\n";
+    }
+    echo "\t</tr>\n";
+
+// echo "</table>\n";
+    // pg_close($dbconn);
+  }?>
+          <!-- <tr class="table-title">
             <td class="table-data">Micheal Jenkins</td>
             <td class="table-data"><input type="checkbox" id="1" class="box"></input></td>
             <td class="table-data"><input id="2" type="checkbox" class="box"></td>
@@ -187,7 +204,7 @@
             <td class="table-data"><input id="46" type="checkbox" class="box"></td>
             <td class="table-data"><input id="47" type="checkbox" class="box"></td>
             <td class="table-data"><input id="48" type="checkbox" class="box"></td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>

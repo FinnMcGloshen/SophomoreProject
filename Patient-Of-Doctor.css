@@ -48,7 +48,7 @@ table {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 4vh;
+  margin-top: 1vh;
 }
 .POD-Btn-1 {
   margin-left: 10px;
@@ -102,7 +102,7 @@ table {
   flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
   margin-top: 3vh;
 }
 .Welcome-Greeting-2 {

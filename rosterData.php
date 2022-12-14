@@ -1,6 +1,6 @@
 <?php 
 
-    $dbconn = pg_connect("host=localhost dbname=aaronwork user=aaronwork password=gamecube")
+    $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
     or die('Could not connect: ' . pg_last_error());
     
     // Performing SQL query

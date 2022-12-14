@@ -15,7 +15,6 @@ body {
 }
 .Welcome-Greeting {
   text-align: center;
-  margin-top: 1.5vh;
 }
 .Table-Title {
   text-align: center;
@@ -104,7 +103,7 @@ table {
   justify-content: space-evenly;
   text-align: center;
   padding-top: 10px;
-  margin-top: 4vh;
+  margin-top: 3vh;
 }
 .Welcome-Greeting-2 {
   text-align: center;
@@ -264,4 +263,24 @@ table {
   margin-top: -50px;
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
+}
+.Btn-Fix {
+  margin-right: 40vh;
+  margin-left: 4vw;
+  margin-top: 10px;
+}
+.Redirect-Home {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  font-family: "Source Serif Pro", serif;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #02c8db;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+  transition: all 0.5s;
 }

@@ -12,6 +12,108 @@
     <title>Patient's Home</title>
   </head>
   <body>
+    <div class="Btn-Fix">
+      <button onclick="history.go(-1);" class="Redirect-Home"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+      </svg>Go Back</a></button>
+    </div>
+    <div class="patientshome">
+      <div class="Welcome-Greeting-1">
+      <header>Patient's Home</header>
+      <input type="text" class="patientid" placeholder="Patient ID" />
+      <br/>
+      <input type="text" class="patientname" placeholder="Patient Name" />
+      <br/>
+      <input type="text" class="date" placeholder="Date" />
+      <br/>
+      </div>
+      <table class="Main-Table">
+        <tbody>
+          <tr class="table-title">
+            <th class="table-data">Name</th>
+            <th class="table-data">Morning Medicine</th>
+            <th class="table-data">Afternoon Medicine</th>
+            <th class="table-data">Evening Medicine</th>
+            <th class="table-data">Doctor's Comments</th>
+            <!-- <th class="table-data">Night Medicine</th>
+            <th class="table-data">Breakfast</th>
+            <th class="table-data">Lunch</th>
+            <th class="table-data">Dinner</th> -->
+          </tr>
+          <?php 
+  $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
+  or die('Could not connect: ' . pg_last_error());
+    $query4 = "SELECT * FROM prescriptions;";
+    
+    $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error()); 
+    
+while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
+    echo "\t<tr class='table-title'>\n";
+    foreach ($line as $col_value) {
+        echo "\t\t<td class='table-data'>$col_value</td>\n";
+    }
+    echo "\t</tr>\n";
+
+// echo "</table>\n";
+    // pg_close($dbconn);
+  }?>
+          <!-- <tr class="table-title">
+            <td class="table-data">Christine Philips</td>
+            <td class="table-data"><input id="1" type="checkbox" class="box"></td>
+            <td class="table-data">Steve Johnson</td>
+            <td class="table-data"><input id="2" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="3" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="4" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="5" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="6" type="checkbox" class="box"></td>
+            <td class="table-data"><input id="7" type="checkbox" class="box"></td>
+          </tr> -->
+          <!-- <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr class="table-title">
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+            <td class="table-data">test</td>
+          </tr>
+          <tr>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+          </tr> -->
+        </tbody>
+      </table>
     <nav>
       <ul>
         <li>

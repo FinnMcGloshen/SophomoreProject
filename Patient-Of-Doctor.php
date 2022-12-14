@@ -42,6 +42,50 @@
             <th class="table-data">Evening Medicine</th>
             <th class="table-data">Comments</th>
           </tr>
+          <?php 
+  $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
+  or die('Could not connect: ' . pg_last_error());
+
+   if(isset($_POST['insertp'])){
+    // form data
+    $pname = $_POST['pname'];
+    $mmed = $_POST['mmed'];
+    $amed = $_POST['amed'];
+    $emed = $_POST['emed'];
+    $comm = $_POST['comm'];
+   
+    // $fields = implode (" , ", $fields);
+    // $query1 = 'DROP TABLE IF EXISTS accounts;';
+    // $query2 = 'CREATE TABLE prescriptions (pname text, mmed text, amed text, emed text, comm text);';
+    $query3 = "INSERT INTO prescriptions(pname,mmed,amed,emed,comm)
+    VALUES ('$pname','$mmed','$amed','$emed','$comm');";
+    $query4 = "SELECT * FROM prescriptions WHERE pname = '$pname';";
+    // $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
+    $result3 = pg_query($query3) or die('Query failed: ' . pg_last_error());
+    $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error()); 
+    // if($role == 'Patient'){
+    //   $result3 = pg_query($additionalQuery) or die('Query failed: ' . pg_last_error());
+    // } else {
+    //   $result = pg_query($query3) or die('Query failed: ' . pg_last_error());
+    // }
+    // echo 'Account created!';
+    // header('location: Login.php');
+while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
+    echo "\t<tr class='table-title'>\n";
+    foreach ($line as $col_value) {
+        echo "\t\t<td class='table-data'>$col_value</td>\n";
+    }
+    echo "\t</tr>\n";
+}
+echo "</table>\n";
+    pg_close($dbconn);
+  }?>
+          <!-- <tr class="table-title">
+            <td class="table-data"><input id="1" type="date" class="date" onchange='saveValue(this)'></td>
+            <td class="table-data"><input id="2" type="text" class="appts" onkeyup='saveValue(this)'></td>
+            <td class="table-data"><input id="3" type="text" class="appts" onkeyup='saveValue(this)'></td>
+            <td class="table-data"><input id="4" type="text" class="appts" onkeyup='saveValue(this)'></td>
+            <td class="table-data"><input id="5" type="text" class="appts" onkeyup='saveValue(this)'></td>
           <tr class="table-title">
             <td class="table-data">
               <input
@@ -211,47 +255,12 @@
             </td>
           </tr>
           <tr class="table-title">
-            <td class="table-data">
-              <input
-                id="21"
-                type="date"
-                class="date"
-                onchange="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="22"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="23"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="24"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-            <td class="table-data">
-              <input
-                id="25"
-                type="text"
-                class="appts"
-                onkeyup="saveValue(this)"
-              />
-            </td>
-          </tr>
+            <td class="table-data"><input id="21" type="date" class="date" onchange='saveValue(this)'></td>
+            <td class="table-data"><input id="22" type="text" class="appts" onkeyup='saveValue(this)'></td>
+            <td class="table-data"><input id="23" type="text" class="appts" onkeyup='saveValue(this)'></td>
+            <td class="table-data"><input id="24" type="text" class="appts" onkeyup='saveValue(this)'></td>
+            <td class="table-data"><input id="25" type="text" class="appts" onkeyup='saveValue(this)'></td>
+          </tr> -->
         </tbody>
       </table>
     </div>
@@ -261,9 +270,29 @@
         <h2>Morning Medicine:</h2>
         <input type="text" class="textinput" id="new1" />
       </div>
-      <div class="POD-Input-Style">
-        <h2>Afternoon Medicine:</h2>
-        <input type="text" class="textinput" id="new2" />
+      <div class="Welcome-Greeting-2"><h2>Add a New Prescription:</h2></div>
+      <div class="POD-Input-Organise">
+        <div class="POD-Input-Style">
+        <form method="POST" name="insertp">
+        <div class="POD-Input-Style">
+          <h2>Patient Name:</h2>
+          <input type="text" class="textinput" id="patientname" name="pname">
+        </div>
+          <h2>Morning Medicine:</h2>
+          <input type="text" class="textinput" id="new1" name="mmed">
+        </div>
+        <div class="POD-Input-Style">
+          <h2>Afternoon Medicine:</h2>
+          <input type="text" class="textinput" id="new2" name="amed">
+        </div>
+        <div class="POD-Input-Style">
+          <h2>Evening Medicine:</h2>
+          <input type="text" class="textinput" id="new3" name="emed">
+        </div>
+        <div class="POD-Input-Style">
+          <h2>Doctor's Comments:</h2>
+          <input type="text" class="textinput" id="new4" name="comm">
+        </div>
       </div>
       <div class="POD-Input-Style">
         <h2>Evening Medicine:</h2>
@@ -315,8 +344,9 @@
       </div>
     </div>
     <div class="POD-Btn-Organise">
-      <button class="POD-Btn-1" onclick="onDelete()">Okay</button>
+      <input class="POD-Btn-1" onclick="newrow()" type="submit" value="Okay" name="insertp"></input>
       <button class="POD-Btn-2" onclick="cancel()">Cancel</button>
+      <form>
     </div>
     <br />
     <div class="loader"></div>

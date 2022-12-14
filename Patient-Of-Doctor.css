@@ -8,12 +8,14 @@
   font-family: "Source Serif Pro", serif;
 }
 body {
-  background-color: lightblue;
+  background: #FFAFBD;
+  background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  
+  background: linear-gradient(to right, #ffc3a0, #FFAFBD);
   font-family: "Source Serif Pro", serif;
 }
 .Welcome-Greeting {
   text-align: center;
-  margin-top: 11vh;
+  margin-top: 1.5vh;
 }
 .Table-Title {
   text-align: center;
@@ -23,7 +25,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -75%);
+  transform: translate(-50%, -65%);
   width: 1150px;
   padding: 10px;
   background: #fff;
@@ -47,7 +49,7 @@ table {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 9vh;
+  margin-top: 4vh;
 }
 .POD-Btn-1 {
   margin-left: 10px;
@@ -62,7 +64,7 @@ table {
   cursor: pointer;
   transition: all 0.5s;
   font-size: 22px;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px lightblue;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #FFAFBD;
 }
 .POD-Btn-2 {
   margin-left: 10px;
@@ -76,7 +78,7 @@ table {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px lightblue;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #FFAFBD;
   font-size: 22px;
 }
 .POD-Btn-1:hover {
@@ -100,12 +102,13 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  text-align: center;
   padding-top: 10px;
   margin-top: 4vh;
 }
 .Welcome-Greeting-2 {
   text-align: center;
-  margin-top: 42vh;
+  margin-top: 45vh;
 }
 .textinput {
   margin-top: 15px;
@@ -152,12 +155,113 @@ table {
 .date {
   font-size: larger;
 }
-#topinput1,
-#topinput2 {
-  margin-left: 46%;
-}
+
 .appts {
   border: 1px solid lightgray;
   height: 30px;
   font-size: medium;
+}
+.model-container {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.model-open {
+  display: flex;
+}
+.model {
+  max-width: 700px;
+  max-height: 400px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-family: "Source Serif Pro", serif;
+}
+.model-btn {
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 3px;
+  margin-left: 0.5em;
+  font-family: "Source Serif Pro", serif;
+  cursor: pointer;
+}
+.model-header {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.model-header h2 {
+  margin: 1em;
+}
+.model-content {
+  padding: 1em;
+}
+.model-header span {
+  align-self: flex-end;
+  padding-right: 0.3em;
+  cursor: default;
+}
+.model-footer {
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: flex-end;
+}
+.model-confirm-btn {
+  background-color: tomato;
+  font-family: "Source Serif Pro", serif;
+  border: none;
+  cursor: pointer;
+}
+.popup {
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+.popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+#svg-style{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
 }

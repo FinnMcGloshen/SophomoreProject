@@ -26,17 +26,34 @@
       <table class="Main-Table">
         <tbody>
           <tr class="table-title">
-            <th class="table-data">Doctor's Name</th>
-            <th class="table-data">Doctor's Appointment</th>
-            <th class="table-data">Caregiver's Name</th>
+            <th class="table-data">Name</th>
             <th class="table-data">Morning Medicine</th>
             <th class="table-data">Afternoon Medicine</th>
-            <th class="table-data">Night Medicine</th>
+            <th class="table-data">Evening Medicine</th>
+            <th class="table-data">Doctor's Comments</th>
+            <!-- <th class="table-data">Night Medicine</th>
             <th class="table-data">Breakfast</th>
             <th class="table-data">Lunch</th>
-            <th class="table-data">Dinner</th>
+            <th class="table-data">Dinner</th> -->
           </tr>
-          <tr class="table-title">
+          <?php 
+  $dbconn = pg_connect("host=localhost dbname=newdb user=postgres password=pgadmin")
+  or die('Could not connect: ' . pg_last_error());
+    $query4 = "SELECT * FROM prescriptions;";
+    
+    $result4 = pg_query($query4) or die('Query failed: ' . pg_last_error()); 
+    
+while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
+    echo "\t<tr class='table-title'>\n";
+    foreach ($line as $col_value) {
+        echo "\t\t<td class='table-data'>$col_value</td>\n";
+    }
+    echo "\t</tr>\n";
+
+// echo "</table>\n";
+    // pg_close($dbconn);
+  }?>
+          <!-- <tr class="table-title">
             <td class="table-data">Christine Philips</td>
             <td class="table-data"><input id="1" type="checkbox" class="box"></td>
             <td class="table-data">Steve Johnson</td>
@@ -46,7 +63,7 @@
             <td class="table-data"><input id="5" type="checkbox" class="box"></td>
             <td class="table-data"><input id="6" type="checkbox" class="box"></td>
             <td class="table-data"><input id="7" type="checkbox" class="box"></td>
-          </tr>
+          </tr> -->
           <!-- <tr class="table-title">
             <td class="table-data">test</td>
             <td class="table-data">test</td>

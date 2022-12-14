@@ -34,7 +34,7 @@ $fields = array('fname','lname','email','role','phone','password','dob');
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $email = $_POST['email'];
-    $role = $_POST['role'];
+    $role = $_POST['role1'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
     $dob = $_POST['dob'];
@@ -91,14 +91,14 @@ pg_close($dbconn);
   <body>
   <div class="choices" id="input-fields">
   <form action="" method="POST">
-      <select name="role" id="Role-Type" onchange="toggleDiv(this.value)">
+      <select name="role1" id="Role-Type" onchange="toggleDiv(this.value)">
         <option value=""> Select an Option:</option>
         <option value="Admin">Admin</option>
         <option value="Supervisor">Supervisor</option>
         <option value="Caregiver">Caregiver</option>
         <option value="Doctor">Doctor</option>
         <option value="Family Member">Family Member</option>
-        <option value="Patient" name="role">Patient</option>
+        <option value="Patient">Patient</option>
       </select>
     </div>
     <div class="New-Roster-Div" id="Form-1">
@@ -349,24 +349,29 @@ pg_close($dbconn);
           }
         });
       }
+      
       function toggleDiv(value){
+        const Form1 = document.getElementById("Form-1");
+        const Form2 = document.getElementById("Form-2");
+        // const f1 = document.getElementsByClassName("New-Roster-Div")
             if (value == ""){
                 alert("Please select an option!");
                 const Form1 = document.getElementById("Form-1");
-
               Form1.style.display = value == 'Patient' ? "block" : "none";
-
             }
-            else if(value=="Patient"){
-            const Form1 = document.getElementById("Form-1");
-            Form1.style.display = value == 'Patient' ? "block" : "none";
-            
+            else if(value == "Patient"){
+            // Form1.style.display = value == 'Patient' ? "block" : "none";
+            Form2.style.display = "none";
+            Form1.style.display = "block";
+
             }
             else{
-            const Form2 = document.getElementById("Form-2");
-
-            Form2.style.display = value == 'Admin'||'Supervisor'||'Doctor'||'Caregiver'||'Family Member' ? "block" : "none";
-            }
+              Form2.style.display = "block";
+              Form1.style.display = "none";
+            // Form2.style.display = value == 'Admin'||'Supervisor'||'Doctor'||'Caregiver'||'Family Member' ? "block" : "none";
+          }
+            // Form2.style.display = value == 'Admin'||'Supervisor'||'Doctor'||'Caregiver'||'Family Member' ? "block" : "none";
+            
         }
     </script>
   </body>

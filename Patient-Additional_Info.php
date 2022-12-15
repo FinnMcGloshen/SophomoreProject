@@ -55,7 +55,7 @@
       <div class="input-fields">
         <h3>Patient ID:</h3>
         <br>
-        <form action="" method="POST">
+        <form action="Patient's-Home.php" method="POST">
           <div class="username">
             <svg
               xmlns="http://www.w3.org/2000/svg"

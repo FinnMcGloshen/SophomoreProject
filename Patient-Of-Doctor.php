@@ -84,6 +84,8 @@ while ($line = pg_fetch_array($result4, null, PGSQL_ASSOC)) {
     </div>
     <div class="Welcome-Greeting-2"><h2>Add a New Prescription:</h2></div>
     <div class="POD-Input-Organise">
+      <div class="pinput" id="pinput">
+        <div class="pinput1">
         <form method="POST" name="insertp">
         <div class="POD-Input-Style">
           <h2>Patient Name:</h2>
